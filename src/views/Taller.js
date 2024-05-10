@@ -17,11 +17,9 @@ const Workplace = () => {
             </div>
             <div className="card">
                 <p></p>
-                <img/>
             </div>
             <div className="card">
                 <p></p>
-                <img/>
             </div>
             <Contact/>
         </div>
