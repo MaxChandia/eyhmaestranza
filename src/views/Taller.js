@@ -9,10 +9,10 @@ const Workplace = () => {
         <div className="cardContainer">
             <div className="card">
                 <p>Torno CNC 720x2500</p>
-                <img src={e2}/>
+                <img alt="torno" src={e2}/>
             </div>
             <div className="card">
-                <img src={e1}/>
+                <img alt="centro de mecanizado" src={e1}/>
                 <p>Centro de Mecanizado 1020 x 540 x 510</p>
             </div>
             <div className="card">

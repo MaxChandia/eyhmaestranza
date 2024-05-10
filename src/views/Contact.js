@@ -8,7 +8,7 @@ const ContactPage = () => {
         <div className="ContactPageContainer">
             <Navbar/>
             <div className="imageContactContainer">
-                <img src={c2}></img>
+                <img alt="contactImage" src={c2}></img>
             </div>
             <div className="titleContainer">
                 <h1>Comuníquese con nosotros</h1>
