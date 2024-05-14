@@ -20,9 +20,6 @@ const Home = () =>{
     <div className="App">
       <Navbar/>
       <Carrousel/>
-      <div className="inbetweenText" style={{height:"180px", width:"100%"}}>
-        <h1>Más de 10 años aportando al rubro de la metalmecánica</h1>
-      </div>
       {/*<div className="services">
         <p>
           Servicios

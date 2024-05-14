@@ -1,17 +1,15 @@
-.contactPageContainer {
-    margin-bottom: 150px;
-}
+
 
 
 .imageContactContainer {
     width: 100%;
-    height: 700px;
+    height: 100%;
     display: flex;
     margin: 0;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .imageContactContainer img {
@@ -19,6 +17,7 @@
     height: auto;
     border: 0;
 }
+
 
 div {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -68,6 +67,7 @@ div li{
 }
 
 .titleContainer {
+    margin-top: 180px;
     text-align: center; /* Centra el texto horizontalmente */
     margin-bottom: 20px; /* Espacio entre el título y el contenido */
 }

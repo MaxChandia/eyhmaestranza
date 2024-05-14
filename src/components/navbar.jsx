@@ -16,7 +16,7 @@ const Navbar = () => {
             <img src={logo} alt="logo"/>
             <ul className="headerContact">
                 <li> 
-                    <p><FontAwesomeIcon icon={faPhone} style={{fontSize:'15px'}}/>  552895698  +56 9 42663481</p> 
+                    <p><FontAwesomeIcon icon={faPhone} style={{fontSize:'15px'}}/>  +55 2 895698 +56 9 42663481</p> 
                 </li>
                 <li>
                     <p><FontAwesomeIcon icon={faEnvelope} style={{fontSize:'20px'}} />  negocios@eyhmaestranza.cl</p>

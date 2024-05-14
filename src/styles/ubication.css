@@ -1,23 +1,34 @@
 .ubication {
+    margin-top: 150px;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .map {
-    width: 50%;
+    width: 100%;
 
 }
 
 .mapText {
-    width: 50%;
-    margin-top: 40px;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(22, 22, 75);
+    color: azure;
+    margin-left: -20px;
+    padding-right: 50px;
+}
+
+.mapText h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
 }
 
 .map iframe {
     width: 100%; 
-
-
+    height: 70vh;
 }

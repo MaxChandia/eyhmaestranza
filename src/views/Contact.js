@@ -7,11 +7,9 @@ const ContactPage = () => {
     return (
         <div className="ContactPageContainer">
             <Navbar/>
-            <div className="imageContactContainer">
-                <img alt="contactImage" src={c2}></img>
-            </div>
             <div className="titleContainer">
                 <h1>Comuníquese con nosotros</h1>
+                <p>Para consultar o cotizar algún servicio o requerimiento puede contactarse con nosotros a través de los siguientes componentes</p>
             </div>
             <div className="contactPageContainer" >
                 <ul>
@@ -36,6 +34,9 @@ const ContactPage = () => {
                 </form>
                 <button>Enviar</button>
             </div>
+            </div>
+            <div className="imageContactContainer">
+                <img alt="contactImage" src={c2}></img>
             </div>
         </div>
     );
