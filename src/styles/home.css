@@ -46,9 +46,9 @@
 
 
 .products {
-    height: auto; /* Cambiar a 'auto' para que el contenedor crezca según el contenido */
-    width: 100%;
-    text-align: center; /* Centrar el contenido horizontalmente */
+    height: auto; 
+    width: auto;
+    text-align: center; 
     margin-bottom: 60px;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .imageProducts {
-    margin-top: 5px; /* Agregar un margen superior entre el título y las imágenes */
+    margin-top: 5px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@
 .imageProducts img {
     height: 200px;
     width: 300px;
-    margin: 5px; /* Agregar margen entre las imágenes */
+    margin: 5px; 
 }
 
 .partners {
@@ -78,3 +78,18 @@
     color: white;
 }
 
+@media (max-width: 768px) {
+    .imageProducts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageProducts img {
+        width: 80%;
+    }
+
+    .partners h1 {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}

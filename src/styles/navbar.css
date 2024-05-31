@@ -1,110 +1,117 @@
-.NavPages ul {
-    list-style-type: none;
-    margin: 0;
-    display: flex; /* Utilizamos flexbox */
-    flex-wrap: wrap; /* Permitimos que los elementos se envuelvan en múltiples líneas si es necesario */
-    align-items: center; /* Centramos verticalmente los elementos */
-    justify-content: center; /* Centramos horizontalmente los elementos */
-    
-}
-
-.NavPages ul li a {
-    text-decoration: none; /* Quitar subrayado */
-    color: inherit; /* Heredar el color del texto */
-    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
-}
-
-.image {
-    height: 100px;
-    background-color: white;
-    display: flex;
-    
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.image img {
-    margin-left: 100px;
-    height: 100%; 
-    animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-
-.image ul {
-    list-style-type: none;
-    margin: 0;
-    display: flex; /* Utilizamos flexbox */
-    flex-wrap: wrap; /* Permitimos que los elementos se envuelvan en múltiples líneas si es necesario */
-    align-items: center; /* Centramos verticalmente los elementos */
-    justify-content: center; /* Centramos horizontalmente los elementos */
-}
-
-.image li {
-    width: 10%;
-    text-align: center; /* Centramos el texto horizontalmente */
-}
-
-.NavPages li {
-    display: inline-block; /* Hace que los elementos de la lista se muestren en línea */    
-    margin-right: 80px;
-}
-
-.NavPages li p {
-    margin: 0; /* Elimina los márgenes predeterminados del párrafo */
-    padding: 15px; /* Añade relleno alrededor del texto */
-    color: white; /* Color del texto */
-}
-
-
-
-.NavPages {
-    display: flex;
-    justify-content: space-around; /* Ajusta el espacio alrededor de los elementos */
-    align-items: center;
-    text-align: center;
-}
-
-
-.hovered {
-    background-color: rgb(29, 29, 103); /* Cambia el color al pasar el ratón sobre el elemento */
-}
-
 .navbar {
     background-color: rgb(4, 4, 53);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
 }
 
-.NavPages p {
-    font-size: 14px;
-    font-weight: bold;
+.navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+}
+
+.logo {
+    height: 80px;
+    margin-left: 10px;
+}
+
+.headerContact {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .headerContact li {
-    margin-right: 150px;
-    display: flex; /* Utilizamos flexbox */
-    align-items: center; /* Alineamos verticalmente los elementos */
+    margin: 0 20px;
+}
+
+.NavPages {
+    background-color: rgb(4, 4, 53);
+}
+
+.NavPages ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    white-space: nowrap;
-    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
-.headerContact p{
-  font-size: 15px
-}   
-
-.NavPages p:hover {
-    background-color: rgb(29, 29, 103); /* Cambia el color al pasar el ratón sobre el elemento */
+.NavPages li {
+    margin: 10px 20px;
 }
 
-.NavPages li a {
-    display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
-    text-decoration: none; /* Quitar subrayado del enlace */
+.NavPages li p {
+    margin: 0;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.NavPages img{
+    display: none;
+}
+
+.hovered {
+    background-color: rgb(29, 29, 103);
+}
+
+@media (max-width: 768px) {
+    .navbar-top {
+        flex-direction: column-reverse;
+        background-color: rgb(4, 4, 53);
+    }
+
+    .navbar-top img {
+        display: none;
+    }
+
+    .headerContact {
+        justify-content: center;
+        align-items: center;
+        font-size: 8px;
+        color: white;
+    }
+
+    .headerContact .direction{
+        display: none;
+    }
+
+
+    .NavPages {
+        background-color: white;
+    }
+
+    .NavPages img{
+        display: flex;
+    }
+
+    .NavPages ul {
+        flex-direction: column;
+        
+    }
+
+
+    .header-responsive {
+        display: flex;
+    }
+
+    .NavPageList {
+        background-color: rgb(4, 4, 53);
+        left: -100%;
+    }
+    
 }

@@ -1,42 +1,48 @@
-
-
+.contactPageContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh; 
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    margin-top: 10px;
+}
 
 .imageContactContainer {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 500px;
     display: flex;
-    margin: 0;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: 50px;
 }
 
 .imageContactContainer img {
     width: 100%;
-    height: auto;
     border: 0;
 }
 
+.contactPageContact {
+    height: 500px;
+}
 
 div {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div li {
     list-style-type: none;
 }
 
-div li{
-    list-style-type: none;
-}
 
-.contactPageContainer {
+.contactPageData {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al principio */
 }
 
 .formulario {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
     margin-top: 50px;
 }
 
@@ -44,6 +50,7 @@ div li{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    width: 100%; /* Hace que el grupo ocupe todo el ancho disponible */
 }
 
 .grupo input {
@@ -56,18 +63,18 @@ div li{
 }
 
 .grupo input {
-    width: 250px;
+    width: calc(50% - 10px); /* Ajusta el ancho para que ambos inputs ocupen 50% con un margen de 10px */
     height: 30px;
 }
 
 .grupo .comentarios {
     height: 100px;
-    width: 550px;
-
+    width: 100%;
+    resize: none; /* Desactiva el redimensionamiento */
 }
 
 .titleContainer {
-    margin-top: 180px;
+    margin-top: 20px;
     text-align: center; /* Centra el texto horizontalmente */
     margin-bottom: 20px; /* Espacio entre el título y el contenido */
 }
