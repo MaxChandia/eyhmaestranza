@@ -1,10 +1,12 @@
 import React from "react";
 import '../styles/ubication.css'
-import Contact from "../components/contact";
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
 
 const Ubication = () =>{
     return (
         <div className="ubication">
+             <Navbar/>
             <div className="mapText"  >
                 <h1>Cómo llegar a E y H Maestranza</h1>
                 <p>
@@ -25,7 +27,7 @@ Parque Industrial AGPIA
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            <Contact/>
+            <Footer/>
         </div>
     )
 }

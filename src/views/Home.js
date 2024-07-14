@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Contact from "../components/contact";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import '../styles/navbar.css';
 import '../styles/home.css';
 import '../styles/contact.css';
 import Carrousel from "../components/carrousel";
-import s1 from '../s1.jpg'
 import p1 from '../p1.jpg'
 import p2 from '../p2.jpg'
 import p3 from '../p3.jpg'
 import p4 from '../p4.jpg'
 import p5 from '../p5.jpeg'
+import aaaaa from '../aaaaa.jpg'
 
 const Home = () =>{
   const [showImage, setShowImage] = useState(false);
@@ -20,23 +22,24 @@ const Home = () =>{
     <div className="App">
       <Navbar/>
       <Carrousel/>
-      {/*<div className="services">
-        <p>
-          Servicios
-        </p>
-        <ul>
-          <li> Corte</li>
-          <li> Corte</li>
-          <li> Corte</li>
-        </ul>
-        <img src={s1}/>
-  </div> */}
-      <div className="products">
+      <div className="inBetweenText" >
+        <p data-aos="fade-in" data-aos-duration="1000">Más de 10 años contribuyendo al rubro de la metalmecánica</p>
+      </div>
+      <div className="workPlaceDescription" data-aos="fade-right" data-aos-duration="1000"  data-aos-delay="1000">
+        <img src={aaaaa}></img>
+        <div className="descriptionText">
+          <h1><b>En EyH Maestranza Ltda.</b></h1>
+          <p>Contamos con implementos de última tecnología y personal especializado en cada área para satisfacer las necesidades de nuestros clientes. </p>
+          <p style={{marginTop:"20px"}}><b><i><Link to="/nuestrotaller">Revisa nuestro taller</Link></i></b></p>
+
+        </div>
+      </div>
+     <div className="products" data-aos="fade-up">
     <div className="titleProducts">
         <h1>Conoce nuestros trabajos</h1>
         <div className="underline"></div>
     </div>
-    <div className="imageProducts">
+    <div className="imageProducts" >
         <img src={p1} alt="Producto 1" onClick={() => setShowImage(!showImage)}/>
         <img src={p2}alt="Producto 2" />
         <img src={p3} alt="Producto 3" />
@@ -57,7 +60,7 @@ const Home = () =>{
   </div>
     {showImage && (
           <div className="expandedImage">
-          <img src={s1} alt="Servicios" onClick={() => setShowImage(false)} />
+          <img src alt="Servicios" onClick={() => setShowImage(false)} />
           </div>
         )}
         <div className="partners">
@@ -73,7 +76,7 @@ const Home = () =>{
           allowFullScreen="" 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"/>
-        <Contact/>
+          <Footer/>
     </div>
     );
   };

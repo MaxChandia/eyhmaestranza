@@ -1,5 +1,5 @@
 import React from "react";
-import Contact from "../components/contact";
+import Footer from "../components/footer";
 import Navbar from '../components/navbar'
 import m1 from '../m1.jpg'
 import '../styles/aboutUs.css'
@@ -9,7 +9,7 @@ import '../styles/aboutUs.css'
 const AboutUs = () => {
     
  return (
-    <div className="aboutUsContainer" style={{marginTop:"150px"}}>
+    <div className="aboutUsContainer" style={{marginTop:"140px"}}>
         <Navbar/>
         <div className="mission">
             <div className="missionText">
@@ -18,7 +18,7 @@ const AboutUs = () => {
             </div>
             <img alt="workrs" src={m1}/>
         </div>
-        <Contact />
+        <Footer/>
     </div>
  );
 };

@@ -1,16 +1,74 @@
 .App {
     margin:-10px;
     padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
-.inbetweenText {
+.inBetweenText {
     background-color: rgb(4, 4, 53);
     margin-top: -20px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 200px;
+    font-size: 30px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.inBetweenText p {
+    font-family: "Lato", sans-serif;
+    position: relative;
+}
+
+.inBetweenText p::after {
+    content: "";
+    position: absolute;
+    left: 250px;
+    bottom: -25px; 
+    width: 30%; 
+    height: 5px; 
+    background-color: #f46016; 
+}
+
+.workPlaceDescription {
+    height: 600px;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.workPlaceDescription img {
+    height: 100%;
+    width: 100%;
+}
+
+.descriptionText {
+    position: absolute;
+    margin-top: 100px;
+   height: 400px;
+   background-color: #ffffff;
+   width: 45%;
+   border-radius: 0 2% 2% 0;
+   font-family: "Lato", sans-serif;
+}
+
+.descriptionText h1 {
+    margin-top: 100px;
+    width: 500px;
+    margin-left: 150px;
+    color: #931919;
+    font-size: 40px;
+}
+
+.descriptionText p {
+    width: 450px;
+    margin-left: 150px;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(11, 11, 11);
 }
 
 
@@ -78,7 +136,7 @@
     color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .imageProducts {
         flex-direction: column;
         align-items: center;
@@ -91,5 +149,43 @@
     .partners h1 {
         font-size: 18px;
         margin: 20px 0;
+    }
+
+    .descriptionText h1{
+        margin-top: 50px;
+        margin-left: 30px;
+        width: auto;
+        font-size: 35px;
+    }
+
+    .descriptionText p{
+        margin-right: 10px;
+        margin-left: 30px;
+        font-size: 15px;
+        width: auto;
+    }
+
+    .descriptionText {
+        width: auto;
+        margin-left: 50px;
+        margin-right: 50px;
+        border-radius: 2%;
+    }
+
+    .inBetweenText {
+        width: auto;
+        height: 130px;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .inBetweenText p::after {
+        content: "";
+        position: absolute;
+        bottom: -15px; 
+        left: 40%;
+        width: 30%; 
+        height: 2px; 
+        background-color: #f46016; 
     }
 }

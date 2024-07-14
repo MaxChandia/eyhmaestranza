@@ -2,10 +2,13 @@ import React from "react";
 import '../styles/contactPage.css';
 import cont1 from '../cont1.jpg';
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 const ContactPage = () => {
     return (
+        <div>
         <div className="contactPageContainer">
+             <Navbar/>
             <div className="imageContactContainer">
                 <img alt="contactImage" src={cont1}></img>
             </div>
@@ -36,6 +39,9 @@ const ContactPage = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </div>
+        
     );
 };
 

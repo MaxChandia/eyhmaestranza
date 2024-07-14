@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(4, 4, 53);
+    background-color:white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     position: fixed;
@@ -21,18 +21,28 @@
 
 .logo {
     height: 80px;
-    margin-left: 10px;
+    margin-left: 100px;
+
 }
 
 .headerContact {
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 100px 0 0;
 }
 
 .headerContact li {
-    margin: 0 20px;
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    display: none;
 }
 
 .NavPages {
@@ -50,18 +60,19 @@
 }
 
 .NavPages li {
-    margin: 10px 20px;
+    margin: 10px 40px;
+    font-size: 14px;
 }
 
 .NavPages li p {
     margin: 0;
-    padding: 10px;
+    padding: 5px;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
 }
 
-.NavPages img{
+.NavPages img {
     display: none;
 }
 
@@ -82,36 +93,55 @@
     .headerContact {
         justify-content: center;
         align-items: center;
-        font-size: 8px;
+        flex-direction: column;
+        font-size: 10px;
         color: white;
+        height: 80px;
+        margin: 0;
     }
 
-    .headerContact .direction{
-        display: none;
+    .headerContact li {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
     }
 
 
     .NavPages {
         background-color: white;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .NavPages img{
+    .NavPages img {
         display: flex;
     }
 
     .NavPages ul {
         flex-direction: column;
-        
     }
 
 
-    .header-responsive {
+    .icons {
+        color: #850e00;
         display: flex;
+        margin: 5%;
     }
 
     .NavPageList {
+        top:100%;
+        position: absolute;
+        width: 100%;
         background-color: rgb(4, 4, 53);
-        left: -100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
     }
-    
+
+    #check:checked ~ .NavPageList {
+        height: 300px;
+    }
 }

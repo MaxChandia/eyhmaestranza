@@ -1,7 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.aboutUsContainer {
+    width: 100%;
+}
+
+
 .aboutUsText {
     background-color: rgba(49, 49, 49, 0.126);
 }
-
 
 .mission {
     position: relative;
@@ -11,23 +22,12 @@
     height: 100%;
 }
 
-.missionText{
+.missionText {
     width: 50%;
     flex-direction: column;
     display: block;
-    animation: fadeInFromLeft 1s ease forwards;
 }
 
-@keyframes fadeInFromLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 .missionText h1 {
     margin-left: 50px;
@@ -39,20 +39,10 @@
     height: 100px;
 }
 
-.mission img{
+.mission img {
     height: 50%;
     width: 50%;
-    animation: fadeInFromRight 1s ease forwards;
+   
 }
 
-@keyframes fadeInFromRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-    
+
