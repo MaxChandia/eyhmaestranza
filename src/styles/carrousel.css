@@ -30,14 +30,14 @@
 .slideText {
     position: absolute;
     top: 50%; 
-    left: 70%; 
-    transform: translate(-50%, -50%);
+    left: 50%; 
     color: white; 
     font-size: 45px; 
     text-align: center; 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     width: 40%;
     text-decoration: none;
+    font-weight: 700;
+    
 
 
 }
@@ -48,18 +48,22 @@
 }
 
 .slideButton {
-    position: absolute; /* Posiciona el texto encima de la imagen */
-    top: 65%; /* Alinea el texto al centro vertical */
-    left: 70%; /* Alinea el texto al centro horizontal */
-    transform: translate(-50%, -50%); /* Centra el texto */
-    color: #ffffff; /* Color del texto */
-    background-color: #850e00;
-    font-size: 20px; /* Tamaño del texto */
-    text-align: center; /* Alinea el texto al centro */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    width: 13%;
-    height: 5%;
+    position: absolute; 
+    top: 70%; 
+    left: 65%; 
+    color: #fefefe; 
+    background-color: #830e00;
+    font-size: 20px; 
+    font-weight: 700;
+    text-align: center; 
+    width: 10%;
+    height: 6%;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    
 }
 
 @media (max-width: 912px) {

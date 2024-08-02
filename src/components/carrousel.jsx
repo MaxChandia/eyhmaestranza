@@ -14,10 +14,10 @@ const Carrousel = () => {
                 allowFullScreen 
                 title="Maestranza">
             </iframe>
-            <div className="slideText">Aportando con excelencia a la industria minera</div>
+            <div className="slideText" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Aportando con excelencia a la industria minera</div>
             <Link to="/contacto">
-                <button className="slideButton" style={{textDecoration:"none", animation: "fadeInFromRight 1s ease forwards"}}>
-                    Contactenos
+                <button className="slideButton" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1100">
+                    Contáctenos
                 </button>
             </Link>
         </div>

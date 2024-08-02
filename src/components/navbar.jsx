@@ -24,7 +24,7 @@ const Navbar = () => {
                 </Link>
                 <ul className="headerContact">
                     <li>
-                        <p data-aos="fade-left" data-aos-delay="0" data-aos-duration="10000"><FontAwesomeIcon icon={faPhone} style={{ fontSize: '15px' }} /> +55 2 895698 +56 9 42663481</p>
+                        <p data-aos="fade-left" data-aos-delay="0" data-aos-duration="10000"><FontAwesomeIcon icon={faPhone} style={{ fontSize: '15px' }} /> +55 2 895698 | +56 9 42663481</p>
                     </li>
                     <li>
                         <p data-aos="fade-left" data-aos-delay="0"><FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '15px' }} /> negocios@eyhmaestranza.cl</p>
@@ -53,7 +53,7 @@ const Navbar = () => {
                             <Link to="/quienessomos" className={hoveredItem === "Quienes somos" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Quienes somos")}
                                 onMouseLeave={() => setHoveredItem(null)}>
-                                <p>QUIENES SOMOS</p>
+                                <p>QUIÉNES SOMOS</p>
                             </Link>
                         </li>
                         <li>
@@ -68,13 +68,6 @@ const Navbar = () => {
                                 onMouseEnter={() => setHoveredItem("Nuestro Taller")}
                                 onMouseLeave={() => setHoveredItem(null)}>
                                 <p>NUESTRO TALLER</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/ubicacion" className={hoveredItem === "Ubicacion" ? "hovered" : ""}
-                                onMouseEnter={() => setHoveredItem("Ubicacion")}
-                                onMouseLeave={() => setHoveredItem(null)}>
-                                <p>UBICACIÓN</p>
                             </Link>
                         </li>
                         <li>
