@@ -70,11 +70,11 @@ const Home = () =>{
                 </div>
                 <div className="imageContainer">
                     <img src={imgrow2} alt="Service 2" />
-                    <p className="imageText">Trabajo de tornería y fresado</p>
+                    <p className="imageText2">Trabajo de tornería y fresado</p>
                 </div>
                 <div className="imageContainer">
                     <img src={imgrow3} alt="Service 3" />
-                    <p className="imageText">Soldadura</p>
+                    <p className="imageText2">Soldadura</p>
                 </div>
             </div>
       <div className="products" data-aos="fade-up">
