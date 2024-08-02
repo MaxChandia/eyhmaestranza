@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from 'react-modal';
-import Contact from "../components/contact";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import '../styles/navbar.css';
