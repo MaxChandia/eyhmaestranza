@@ -51,7 +51,7 @@ const Home = () =>{
           <p data-aos="fade-in" data-aos-duration="1000">Más de 10 años contribuyendo al rubro de la metalmecánica</p>
         </div>
         <div className="workPlaceDescription" data-aos="fade-right" data-aos-duration="1000"  data-aos-delay="1000">
-          <img src={aaaaa}></img>
+          <img src={aaaaa} alt="workDescription"></img>
           <div className="descriptionText">
             <h1><b>En E&H Maestranza Ltda.</b></h1>
             <p>Contamos con implementos de última tecnología y personal especializado en cada área para satisfacer las necesidades de nuestros clientes. </p>

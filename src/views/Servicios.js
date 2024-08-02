@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import c3 from '../c3.jpg'
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import Modal from 'react-modal';
 import '../styles/services.css'
-import { faGear, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faGear} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import car1 from "../car1.jpg"
 import car2 from "../car2.jpg"
@@ -84,16 +85,26 @@ const Services = () => {
                 <img src={p1} alt="Producto 1" onClick={() => openImage(p1)}/>
                 <img src={p2}alt="Producto 2" onClick={() => openImage(p2)}/>
                 <img src={p3} alt="Producto 3" onClick={() => openImage(p3)}/>
-                <img src={p4} alt="Producto 3" onClick={() => openImage(p4)}/>
+                <img src={p4} alt="Producto 4" onClick={() => openImage(p4)}/>
             </div>
             <div className="imageProducts">
-                <img src={p5} alt="Producto 1" onClick={() => openImage(p1)}/>
-                <img src={c6}alt="Producto 2" onClick={() => openImage(p1)}/>
-                <img src={c7} alt="Producto 3" onClick={() => openImage(p1)}/>
-                <img src={c8} alt="Producto 3" onClick={() => openImage(p1)}/>
+                <img src={p5} alt="Producto 5" onClick={() => openImage(p1)}/>
+                <img src={c6}alt="Producto 6" onClick={() => openImage(p1)}/>
+                <img src={c7} alt="Producto 7" onClick={() => openImage(p1)}/>
+                <img src={c8} alt="Producto 8" onClick={() => openImage(p1)}/>
             </div>
         </div>
             <Footer/>
+            <Modal
+              isOpen={showImage}
+              onRequestClose={closeImage}
+              onClick={handleOverlayClick}
+              contentLabel="Image Lightbox"
+              className="lightbox"
+              overlayClassName="lightbox-overlay"
+            >
+              {selectedImage && <img src={selectedImage} alt="Selected" />}
+            </Modal>
         </div>
     )
 };
