@@ -1,5 +1,4 @@
 
-
 .contactPageContainer {
     display: flex;
     width: 100%;
@@ -144,4 +143,56 @@ div li {
 
 .buttonContainer button {
     width: 100%;
+}
+
+@media (max-width: 912px) {
+    .contactPageContainer {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .imageContactContainer {
+        height: auto;
+        width: 100%;
+    }
+
+    .imageContactContainer img {
+        width: 100%;
+    }
+
+    .contactPageContact {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .contactPageBottom {
+        display: block;
+        width: 100%;
+        margin-left: 0; 
+        padding: 0 20px; 
+    }
+
+    .formulario input{
+        margin-bottom: 10px;
+        
+    }
+
+    .contactPageChannels {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .mapText {
+        margin-top: 150px;
+    }
+
+    .mapText p {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 13px;
+        align-items: center;
+        justify-content: center;
+    }
 }

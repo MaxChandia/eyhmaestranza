@@ -1,6 +1,5 @@
 import React from "react";
 import '../styles/contactPage.css';
-import cont1 from '../cont1.jpg';
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
@@ -10,7 +9,7 @@ const ContactPage = () => {
             <Navbar />
             <div className="contactPageContainer">
                 <div className="imageContactContainer" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
-                    <img alt="contactImage" src={cont1}></img>
+                    <img alt="contactImage" src='photos/contact-image.jpg'></img>
                 </div>
                 <div className="contactPageContact">
                     <div className="contactPageData">

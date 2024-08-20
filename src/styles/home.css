@@ -32,7 +32,7 @@
 }
 
 .imageRowContainer {
-    height: 100vh;
+    height: 85vh;
     width: 100%;
     justify-content: center;
     
@@ -53,7 +53,7 @@
     width: 100%;
     display: flex;
     margin: 0;
-    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .imageContainer {
@@ -65,7 +65,6 @@
     height: 50vh;
     width: 100%
 }
-
 
 
 .imageContainer:hover {
@@ -119,20 +118,25 @@
 
 .descriptionText h1 {
     margin-top: 100px;
-    width: 500px;
+    margin-right: 50px;
+    height: auto;
     margin-left: 150px;
     color: #931919;
-    font-size: 40px;
+    font-size: clamp(20px, 2.6vw, 40px);
+    max-width: 100%; 
+    word-wrap: break-word;
 }
 
 .descriptionText p {
-    width: 450px;
     margin-top: 10px;
     margin-left: 150px;
+    margin-right: 100px;
     font-weight: 400;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 1vw;
     color: rgb(11, 11, 11);
+    max-width: 100%; 
+    word-wrap: break-word;
 }
 
 .descriptionText a {
@@ -142,17 +146,16 @@
 }
 
 
-
 .products {
-    height: auto; 
+    display: block;
+    height: 500px; 
     width: auto;
     text-align: center; 
     margin-bottom: 60px;
 }
 
 .titleProducts {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-size: 30px;
     font-weight: 500;
 }
@@ -212,7 +215,11 @@
     cursor: pointer; 
   }
 
-@media (max-width: 900px) {
+@media (max-width: 912px) {
+    .products {
+        margin-top: 500px;
+        margin-bottom: 1350px;
+    }
     .imageProducts {
         flex-direction: column;
         align-items: center;
@@ -263,5 +270,20 @@
         width: 30%; 
         height: 2px; 
         background-color: #f46016; 
+    }
+
+    .imageRow {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .imageContainer {
+        width: 100%; 
+        margin-bottom: 5px;
+    }
+
+    .imageContainer img {
+        width: 100%;
+        height: auto;
     }
 }

@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../styles/footer.css';
-import logo2 from '../Logo2.png'
+
 
 const Footer = () =>{
     return (
         <div className="footerContainer">
             <div className="logoFooter">
-                <img src={logo2} alt="logo"></img>
+                <img src='/photos/transparent-logo.png' alt="logo"></img>
             </div>
             <div className="siteContainer">
                 <ul>
                     <Link to="/"><li>Inicio</li></Link>
-                    <Link to="/quienessomos"><li>Quiénes Somos</li></Link>
+                    <Link to="/quienes-somos"><li>Quiénes Somos</li></Link>
                     <Link to="/servicios"><li>Servicios</li></Link>
-                    <Link to="/nuestrotaller"><li>Nuestro Taller</li></Link>
+                    <Link to="/nuestro-taller"><li>Nuestro Taller</li></Link>
                     <Link to="/ubicacion"><li>Ubicación</li></Link>
                     <Link to="/contacto"><li>Contacto</li></Link>
                 </ul>
@@ -23,7 +23,7 @@ const Footer = () =>{
                  <ul>
                     <li><h3>Visítanos</h3></li>
                     <li>Avenida Industrial 7720, Galpón 28</li>
-                    <li>Parque Industrial AGPI, Antofagasta</li>
+                    <li>Parque Industrial AGPIA, Antofagasta</li>
                     <li>Lunes a Viernes</li>
                 </ul>
            </div>

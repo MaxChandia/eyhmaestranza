@@ -5,20 +5,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import '../styles/navbar.css';
 import '../styles/home.css';
-import '../styles/contact.css';
 import Carrousel from "../components/carrousel";
-import p1 from '../p1.jpg'
-import p2 from '../p2.jpg'
-import p3 from '../p3.jpg'
-import p4 from '../p4.jpg'
-import p5 from '../p5.jpeg'
-import c6 from '../c6.jpg'
-import c7 from '../c7.jpg'
-import c8 from '../c8.jpg'
-import aaaaa from '../aaaaa.jpg'
-import imgrow1 from '../imagerow1.jpg'
-import imgrow2 from '../imagerow2.jpg'
-import imgrow3 from '../imagerow3.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -50,7 +37,7 @@ const Home = () =>{
           <p data-aos="fade-in" data-aos-duration="1000">Más de 10 años contribuyendo al rubro de la metalmecánica</p>
         </div>
         <div className="workPlaceDescription" data-aos="fade-right" data-aos-duration="1000"  data-aos-delay="1000">
-          <img src={aaaaa} alt="workDescription"></img>
+          <img src='\photos\aaaaa.jpg' alt="workDescription"></img>
           <div className="descriptionText">
             <h1><b>En E&H Maestranza Ltda.</b></h1>
             <p>Contamos con implementos de última tecnología y personal especializado en cada área para satisfacer las necesidades de nuestros clientes. </p>
@@ -58,43 +45,45 @@ const Home = () =>{
 
           </div>
         </div>
-        <div className="imageRowTitle" data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">
+        <section className="imageRowContainer">
+            <div className="imageRowTitle" data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">
                 <p>
                     <FontAwesomeIcon icon={faGear} /> Nuestros servicios
                 </p>
             </div>
             <div className="imageRow" data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">
                 <div className="imageContainer">
-                    <img src={imgrow1} alt="Service 1" />
+                    <img src='\photos\image-row-1.jpg' alt="Service 1" />
                     <p className="imageText">Reparación y fabricación de  piezas y estructuras metálicas</p>
                 </div>
                 <div className="imageContainer">
-                    <img src={imgrow2} alt="Service 2" />
+                    <img src='\photos\image-row-2.jpg' alt="Service 2" />
                     <p className="imageText2">Trabajo de tornería y fresado</p>
                 </div>
                 <div className="imageContainer">
-                    <img src={imgrow3} alt="Service 3" />
+                    <img src='\photos\image-row-3.jpg' alt="Service 3" />
                     <p className="imageText2">Soldadura</p>
                 </div>
             </div>
-      <div className="products" data-aos="fade-up">
+      </section>      
+      <section className="products" data-aos="fade-up">
         <div className="titleProducts">
             <p>Conoce nuestros trabajos</p>
             <div className="underline"></div>
         </div>
         <div className="imageProducts" >
-            <img src={p1} alt="Producto 1" onClick={() => openImage(p1)}/>
-            <img src={p2}alt="Producto 2" onClick={() => openImage(p2)}/>
-            <img src={p3} alt="Producto 3" onClick={() => openImage(p3)}/>
-            <img src={p4} alt="Producto 3" onClick={() => openImage(p4)}/>
-        </div>
-        <div className="imageProducts">
-            <img src={p5} alt="Producto 1" onClick={() => openImage(p1)}/>
-            <img src={c6}alt="Producto 2" onClick={() => openImage(p1)}/>
-            <img src={c7} alt="Producto 3" onClick={() => openImage(p1)}/>
-            <img src={c8} alt="Producto 3" onClick={() => openImage(p1)}/>
-        </div>
-    </div>
+                <img src="/photos/product-1.jpg" alt="Producto 1" onClick={() => openImage("/photos/product-1.jpg")}/>
+                <img src="/photos/product-2.jpg" alt="Producto 2" onClick={() => openImage("/photos/product-2.jpg")}/>
+                <img src="/photos/product-3.jpg" alt="Producto 3" onClick={() => openImage("/photos/product-3.jpg")}/>
+                <img src="/photos/product-4.jpg" alt="Producto 4" onClick={() => openImage("/photos/product-4.jpg")}/>
+            </div>
+            <div className="imageProducts">
+                <img src="/photos/product-5.jpeg" alt="Producto 5" onClick={() => openImage("/photos/product-5.jpg")}/>
+                <img src="/photos/product-6.jpg"alt="Producto 6" onClick={() => openImage("/photos/product-6.jpg")}/>
+                <img src="/photos/product-7.jpg" alt="Producto 7" onClick={() => openImage("/photos/product-7.jpg")}/>
+                <img src="/photos/product-8.jpg" alt="Producto 8" onClick={() => openImage("/photos/product-8.jpg")}/>
+            </div>
+      </section >
           {/* <div className="partners">
             <h1>
               Realizamos trabajos para las siguientes empresas

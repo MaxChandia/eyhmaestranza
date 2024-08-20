@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../styles/navbar.css';
 import { Link } from "react-router-dom";
-import logo from '../logo1.png';
 import { faPhone, faEnvelope, faLocationDot, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AOS from 'aos';
@@ -20,7 +19,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-top">
                 <Link to="/">
-                <img src={logo} data-aos="fade-right" data-aos-delay="0" alt="logo" className="logo" />
+                <img src='/photos/logo.png' data-aos="fade-right" data-aos-delay="0" alt="eyhmaestranza-logo" className="logo" />
                 </Link>
                 <ul className="headerContact">
                     <li>
@@ -35,7 +34,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="NavPages" data-aos="fade-up" data-aos-duration="1000" >
-                    <img src={logo} alt="logo" className="logo" />
+                    <img src='\photos\logo.png' alt="eyhmaestranza-logo" className="logo" />
                     <input type="checkbox" id="check" />
                     <label htmlFor="check" className="icons">
                         <FontAwesomeIcon icon={faBars} style={{ fontSize: '30px' }} />
@@ -50,7 +49,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/quienessomos" className={hoveredItem === "Quienes somos" ? "hovered" : ""}
+                            <Link to="/quienes-somos" className={hoveredItem === "Quienes somos" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Quienes somos")}
                                 onMouseLeave={() => setHoveredItem(null)}>
                                 <p>QUIÉNES SOMOS</p>
@@ -64,7 +63,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/nuestrotaller" className={hoveredItem === "Nuestro Taller" ? "hovered" : ""}
+                            <Link to="/nuestro-taller" className={hoveredItem === "Nuestro Taller" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Nuestro Taller")}
                                 onMouseLeave={() => setHoveredItem(null)}>
                                 <p>NUESTRO TALLER</p>

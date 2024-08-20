@@ -11,7 +11,14 @@
 
 
 .aboutUsText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 50%;
+    max-width: 100%; 
     background-color: rgba(196, 196, 196, 0.126);
+    padding: 20px; 
 }
 
 .aboutUsDescription {
@@ -22,33 +29,33 @@
     height: 100%;
 }
 
-.aboutUsText {
-    width: 50%;
-    flex-direction: column;
-    display: block;
-}
-
 
 .aboutUsText h1 {
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-bottom: 30px;
+    text-align: left;
+    margin-bottom: 70px;
     color: #850e00;
+    width: 70%;
 }
 
-.aboutUsText p {
-    margin-left: 100px;
-    margin-bottom: 50px;
+.aboutUsText p {   
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
     width: 70%;
     height: 100px;
     font-size: 15px;
     text-align: justify;
 }
 
-.aboutUsDescription img {
+.aboutUsImage {
     height: 50%;
     width: 50%;
    
+}
+
+.aboutUsImage img {
+    height:auto;
+    width: 100%;
 }
 
 .missionVissionContainer {
@@ -58,12 +65,36 @@
     text-align: center;
 }
 
-.mission {
-    width: 50%;
+
+
+@media (max-width:912px) {
+    .aboutUsDescription {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutUsText {
+        padding: 40px;
+        width: 100%;
+        height: 750px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        display: block;
+
+    }
+
+    .aboutUsText h1 {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .aboutUsText p{
+        width: 100%;
+        margin-bottom: 150px;
+    }
+
+    .aboutUsImage {
+        width: 100%;
+    }
 }
-
-
-.vission {
-    width: 50%;
-}
-

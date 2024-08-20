@@ -40,27 +40,29 @@
 
 @media (max-width: 912px) {
     .footerContainer {
-        height: 1500px;
+        min-height: 1100px;
         flex-direction: column;
         justify-content: center;
     }
 
     .logoFooter {
+        margin-top: -350px;
         margin-left: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-bottom: 30px;
     }
 
     .siteContainer {
         margin-left: 30px;
+        margin-bottom: 30px;
     }
 
     .visitContainer {
         margin-left: 30px;
+        margin-bottom: 30px;
     }
 
     .contactContain {
         margin-left: 30px;
     }
+    
 }
