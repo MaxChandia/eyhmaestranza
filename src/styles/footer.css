@@ -14,24 +14,32 @@
 }
 
 .logoFooter img {
+    align-items: center;
     margin-right: 100px;
     width: auto;
     height: 80px;
+}
+
+.siteContainer, .contactContain, .visitContainer {
+    margin-top: 20px;
 }
 
 .siteContainer li {
     margin-top: 15px;
     font-weight: 600;
     text-decoration: none;
+    margin-right: 70px;
 }
 
 .siteContainer a {
     text-decoration: none;
     color: inherit; 
+    
 }
 
 .visitContainer li {
     margin-top: 15px;
+    margin-right: 50px;
 }
 
 .contactContain li {
@@ -47,7 +55,7 @@
 
     .logoFooter {
         margin-top: -350px;
-        margin-left: 70px;
+        margin-left: 50px;
         margin-bottom: 30px;
     }
 

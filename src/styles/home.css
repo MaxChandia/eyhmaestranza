@@ -4,6 +4,7 @@
 }
 
 
+
 .inBetweenText {
     background-color: rgb(4, 4, 53);
     margin-top: -20px;
@@ -214,6 +215,7 @@
     z-index: 1000; 
     cursor: pointer; 
   }
+
 
 @media (max-width: 912px) {
     .products {

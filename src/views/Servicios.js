@@ -48,6 +48,7 @@ const Services = () => {
     return (
         <div className="servicesContainer" >
              <Navbar/>
+             
             <div className="servicesHeader" data-aos="fade-in" data-aos-duration="1000">
                 <img className="serviceImage" alt="serviceImage" src='/photos/services-header.jpg'></img>
                 <h1 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">EN NUESTRO TALLER GARANTIZAMOS EXCELENTES RESULTADOS</h1>

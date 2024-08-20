@@ -46,12 +46,12 @@ const Home = () =>{
           </div>
         </div>
         <section className="imageRowContainer">
-            <div className="imageRowTitle" data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">
+            <div className="imageRowTitle" data-aos-duration="1000"  data-aos-delay="1000">
                 <p>
                     <FontAwesomeIcon icon={faGear} /> Nuestros servicios
                 </p>
             </div>
-            <div className="imageRow" data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="1000">
+            <div className="imageRow" data-aos-duration="1000"  data-aos-delay="1000">
                 <div className="imageContainer">
                     <img src='\photos\image-row-1.jpg' alt="Service 1" />
                     <p className="imageText">Reparación y fabricación de  piezas y estructuras metálicas</p>

@@ -5,9 +5,12 @@
 }
 
 .servicesHeader {
+    position: relative;
+    display: flex;
     width: auto;
     height: 80vh;
     overflow: hidden;
+    width: 100%;
     
 }
 
@@ -18,6 +21,10 @@
 .servicesHeader h1 {
     position: absolute;
     color: white;
+    top: 20%;
+    right: 5%;
+    width: 50%;
+    text-align: end;
 }
 
 .serviceCardContainer {
@@ -34,6 +41,7 @@
 }
 
 .servicesCard p {
+    margin-bottom: 50px;
     font-size: 40px;
     font-weight: 600;
     padding-top: 80px;
@@ -80,6 +88,7 @@
 }
 
 .productService {
+    margin-top: 50px;
     height: auto; 
     width: auto;
     text-align: center; 
@@ -113,6 +122,12 @@
         height: 30vh;
         overflow: hidden;
         
+    }
+
+    .servicesHeader h1 {
+        font-size: 18px;
+        width: 50%;
+        top: 30%;
     }
 
     .servicesHeader img {
