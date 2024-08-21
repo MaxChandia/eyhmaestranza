@@ -21,12 +21,12 @@
 }
 
 .contactPageContact {
+    margin-left: 50px;
     width: 50%;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 40px;
     
 }
-
 
 
 div li {
@@ -53,7 +53,6 @@ div li {
     box-sizing: border-box;
 } 
 
-
 .titleContact {
     margin-bottom: 20px;
     color: #a31303;
@@ -77,6 +76,7 @@ div li {
     width: calc(50% - 10px); 
     height: 40px;
     padding: 10px;
+    margin-bottom: 10px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -150,6 +150,7 @@ div li {
         display: block;
         flex-direction: column;
         width: 100%;
+        height: auto;
     }
 
     .imageContactContainer {
@@ -165,6 +166,7 @@ div li {
         width: 100%;
         height: auto;
         margin-top: 20px;
+        margin-left: 0;
     }
 
     .contactPageBottom {
@@ -180,7 +182,7 @@ div li {
     }
 
     .contactPageChannels {
-        margin-top: 30px;
+        margin-top: 80px;
         margin-left: 0;
     }
 
