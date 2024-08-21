@@ -71,7 +71,7 @@
     .slideContainer iframe {
         margin-top: 60px;
         height: 650px;
-        width: 200%;
+        width: 220%;
         overflow: hidden;
         transform: translateX(-50%) translateY(-50%);
         left: 50%;
@@ -80,8 +80,8 @@
     }
 
     .slideContainer {
-        margin-top: 80px;
-        height: 540px;
+        margin-top: 60px;
+        height: 600px;
         position: relative;
     }
 
