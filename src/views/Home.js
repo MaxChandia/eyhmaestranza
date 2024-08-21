@@ -48,7 +48,7 @@ const Home = () =>{
         <section className="imageRowContainer">
             <div className="imageRowTitle" data-aos-duration="1000"  data-aos-delay="1000">
                 <p>
-                    <FontAwesomeIcon icon={faGear} /> Nuestros servicios
+                    <FontAwesomeIcon icon={faGear} />&nbsp; Nuestros servicios
                 </p>
             </div>
             <div className="imageRow" data-aos-duration="1000"  data-aos-delay="1000">

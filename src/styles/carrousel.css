@@ -81,7 +81,7 @@
     .slideText {
         margin-top: 60px;
         right: 15%;
-        font-size: 15px;
+        font-size: 13px;
         margin-left: 20px;
         width: 30%;
         text-align: end;
@@ -89,7 +89,7 @@
     }
 
     .slideButton {
-        margin-top: 60px;
+        margin-top: 50px;
         font-size: 10px;
         transform: translateX(50%);
         width: 20%;
