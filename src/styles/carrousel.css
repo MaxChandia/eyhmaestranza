@@ -14,10 +14,6 @@
     width: 100%;
     border: 0;
     pointer-events: none;
-    transform: translateX(-50%) translateY(-50%);
-    left: 50%;
-    top: 50%;
-    position: absolute;
     
 }
 
@@ -73,13 +69,18 @@
 
 @media (max-width: 912px) {
     .slideContainer iframe {
-        margin-top: 70px;
+        margin-top: 60px;
         height: 650px;
         width: 200%;
         overflow: hidden;
+        transform: translateX(-50%) translateY(-50%);
+        left: 50%;
+        top: 50%;
+        position: absolute;
     }
 
     .slideContainer {
+        margin-top: 80px;
         height: 540px;
         position: relative;
     }
