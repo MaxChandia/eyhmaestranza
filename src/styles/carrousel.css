@@ -79,6 +79,7 @@
     }
 
     .slideText {
+        display: none;
         margin-top: 60px;
         right: 15%;
         font-size: 13px;
@@ -89,6 +90,7 @@
     }
 
     .slideButton {
+        display: none;
         margin-top: 50px;
         font-size: 10px;
         transform: translateX(50%);
