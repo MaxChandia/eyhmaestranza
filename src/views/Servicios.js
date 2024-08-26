@@ -13,10 +13,10 @@ const Services = () => {
     const [selectedImage, setSelectedImage] =useState(null);
 
     const images = [
-        "/photos/carrousel-2.jpg",
-        "/photos/carrousel-3.jpg",
-        "/photos/carrousel-4.jpg",
-        "/photos/carrousel-1.jpg"
+        "/photos/carrousel-2.webp",
+        "/photos/carrousel-3.webp",
+        "/photos/carrousel-4.webp",
+        "/photos/carrousel-1.webp"
     ];
 
     const handlePrevClick = () => {
@@ -50,7 +50,7 @@ const Services = () => {
              <Navbar/>
              
             <div className="servicesHeader" data-aos="fade-in" data-aos-duration="1000">
-                <img className="serviceImage" alt="serviceImage" src='/photos/services-header.jpg'></img>
+                <img className="serviceImage" alt="serviceImage" src='/photos/services-header.webp'></img>
                 <h1 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">EN NUESTRO TALLER GARANTIZAMOS EXCELENTES RESULTADOS</h1>
             </div>
             <section className="serviceCardContainer" data-aos="fade-right" data-aos-duration="1000">
@@ -75,16 +75,16 @@ const Services = () => {
                 <div className="underline"></div>
             </div>
             <div className="imageProducts" >
-                <img src="/photos/product-1.jpg" alt="Producto 1" onClick={() => openImage("/photos/product-1.jpg")}/>
-                <img src="/photos/product-2.jpg" alt="Producto 2" onClick={() => openImage("/photos/product-2.jpg")}/>
-                <img src="/photos/product-3.jpg" alt="Producto 3" onClick={() => openImage("/photos/product-3.jpg")}/>
-                <img src="/photos/product-4.jpg" alt="Producto 4" onClick={() => openImage("/photos/product-4.jpg")}/>
+                <img src="/photos/product-1.webp" alt="Producto 1" onClick={() => openImage("/photos/product-1.webp")}/>
+                <img src="/photos/product-2.webp" alt="Producto 2" onClick={() => openImage("/photos/product-2.webp")}/>
+                <img src="/photos/product-3.webp" alt="Producto 3" onClick={() => openImage("/photos/product-3.webp")}/>
+                <img src="/photos/product-4.webp" alt="Producto 4" onClick={() => openImage("/photos/product-4.webp")}/>
             </div>
             <div className="imageProducts">
                 <img src="/photos/product-5.jpeg" alt="Producto 5" onClick={() => openImage("/photos/product-5.jpeg")}/>
-                <img src="/photos/product-6.jpg"alt="Producto 6" onClick={() => openImage("/photos/product-6.jpg")}/>
-                <img src="/photos/product-7.jpg" alt="Producto 7" onClick={() => openImage("/photos/product-7.jpg")}/>
-                <img src="/photos/product-8.jpg" alt="Producto 8" onClick={() => openImage("/photos/product-8.jpg")}/>
+                <img src="/photos/product-6.webp"alt="Producto 6" onClick={() => openImage("/photos/product-6.webp")}/>
+                <img src="/photos/product-7.webp" alt="Producto 7" onClick={() => openImage("/photos/product-7.webp")}/>
+                <img src="/photos/product-8.webp" alt="Producto 8" onClick={() => openImage("/photos/product-8.webp")}/>
             </div>
         </section >
             <Footer/>

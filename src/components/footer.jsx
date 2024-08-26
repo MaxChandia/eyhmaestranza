@@ -11,17 +11,16 @@ const Footer = () =>{
             </div>
             <div className="siteContainer">
                 <ul>
-                    <Link to="/"><li>Inicio</li></Link>
-                    <Link to="/quienes-somos"><li>Quiénes Somos</li></Link>
-                    <Link to="/servicios"><li>Servicios</li></Link>
-                    <Link to="/nuestro-taller"><li>Nuestro Taller</li></Link>
-                    <Link to="/ubicacion"><li>Ubicación</li></Link>
-                    <Link to="/contacto"><li>Contacto</li></Link>
+                    <li><Link to="/" aria-label="Ir a la página principal">Inicio</Link></li>
+                    <li><Link to="/quienes-somos" aria-label="Ir a pestaña Quiénes Somos">Quiénes Somos</Link></li>
+                    <li><Link to="/servicios" aria-label="Ir a pestaña servicios">Servicios</Link></li>
+                    <li><Link to="/nuestro-taller" aria-label="Ir a pestaña Nuestro Taller">Nuestro Taller</Link></li>
+                    <li><Link to="/contacto" aria-label="Ir a pestaña Contactos">Contacto</Link></li>
                 </ul>
             </div>
             <div className="visitContainer">
                  <ul>
-                    <li><h3>Visítanos</h3></li>
+                    <li><p className="titleContainer">Visítanos</p></li>
                     <li>Avenida Industrial 7720, Galpón 28</li>
                     <li>Parque Industrial AGPIA, Antofagasta</li>
                     <li>Lunes a Viernes</li>
@@ -29,7 +28,7 @@ const Footer = () =>{
            </div>
            <div className="contactContain">
                 <ul>
-                    <li><h3>Contacto</h3></li>
+                    <li><p className="titleContainer">Contacto</p></li>
                     <li>Teléfono: 55 2 895698</li>
                     <li>Celular: +56 9 42663481</li>
                     <li>negocios@eyhmaestranza.cl</li>

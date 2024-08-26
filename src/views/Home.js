@@ -37,11 +37,11 @@ const Home = () =>{
           <p data-aos="fade-in" data-aos-duration="1000">Más de 10 años contribuyendo al rubro de la metalmecánica</p>
         </div>
         <div className="workPlaceDescription" data-aos="fade-right" data-aos-duration="1000"  data-aos-delay="1000">
-          <img src='\photos\aaaaa.jpg' alt="workDescription"></img>
+          <img src='\photos\aaaaa.webp' alt="workDescription"></img>
           <div className="descriptionText">
             <h1><b>En E&H Maestranza Ltda.</b></h1>
             <p>Contamos con implementos de última tecnología y personal especializado en cada área para satisfacer las necesidades de nuestros clientes. </p>
-            <p style={{marginTop:"20px"}}><b><i><Link to="/nuestrotaller"> <FontAwesomeIcon icon={faArrowRight} /> Revisa nuestro taller</Link></i></b></p>
+            <p style={{marginTop:"20px"}}><b><i><Link to="/nuestro-taller"> <FontAwesomeIcon icon={faArrowRight} /> Revisa nuestro taller</Link></i></b></p>
 
           </div>
         </div>
@@ -53,15 +53,15 @@ const Home = () =>{
             </div>
             <div className="imageRow" data-aos-duration="1000"  data-aos-delay="1000">
                 <div className="imageContainer">
-                    <img src='\photos\image-row-1.jpg' alt="Service 1" />
+                    <img src='\photos\image-row-1.webp' alt="Service 1" />
                     <p className="imageText">Reparación y fabricación de  piezas y estructuras metálicas</p>
                 </div>
                 <div className="imageContainer">
-                    <img src='\photos\image-row-2.jpg' alt="Service 2" />
+                    <img src='\photos\image-row-2.webp' alt="Service 2" />
                     <p className="imageText2">Trabajo de tornería y fresado</p>
                 </div>
                 <div className="imageContainer">
-                    <img src='\photos\image-row-3.jpg' alt="Service 3" />
+                    <img src='\photos\image-row-3.webp' alt="Service 3" />
                     <p className="imageText2">Soldadura</p>
                 </div>
             </div>
@@ -72,16 +72,16 @@ const Home = () =>{
             <div className="underline"></div>
         </div>
         <div className="imageProducts" >
-                <img src="/photos/product-1.jpg" alt="Producto 1" onClick={() => openImage("/photos/product-1.jpg")}/>
-                <img src="/photos/product-2.jpg" alt="Producto 2" onClick={() => openImage("/photos/product-2.jpg")}/>
-                <img src="/photos/product-3.jpg" alt="Producto 3" onClick={() => openImage("/photos/product-3.jpg")}/>
-                <img src="/photos/product-4.jpg" alt="Producto 4" onClick={() => openImage("/photos/product-4.jpg")}/>
+                <img src="/photos/product-1.webp" alt="Producto 1" onClick={() => openImage("/photos/product-1.webp")}/>
+                <img src="/photos/product-2.webp" alt="Producto 2" onClick={() => openImage("/photos/product-2.webp")}/>
+                <img src="/photos/product-3.webp" alt="Producto 3" onClick={() => openImage("/photos/product-3.webp")}/>
+                <img src="/photos/product-4.webp" alt="Producto 4" onClick={() => openImage("/photos/product-4.webp")}/>
             </div>
             <div className="imageProducts">
                 <img src="/photos/product-5.jpeg" alt="Producto 5" onClick={() => openImage("/photos/product-5.jpg")}/>
-                <img src="/photos/product-6.jpg"alt="Producto 6" onClick={() => openImage("/photos/product-6.jpg")}/>
-                <img src="/photos/product-7.jpg" alt="Producto 7" onClick={() => openImage("/photos/product-7.jpg")}/>
-                <img src="/photos/product-8.jpg" alt="Producto 8" onClick={() => openImage("/photos/product-8.jpg")}/>
+                <img src="/photos/product-6.webp"alt="Producto 6" onClick={() => openImage("/photos/product-6.webp")}/>
+                <img src="/photos/product-7.webp" alt="Producto 7" onClick={() => openImage("/photos/product-7.webp")}/>
+                <img src="/photos/product-8.webp" alt="Producto 8" onClick={() => openImage("/photos/product-8.webp")}/>
             </div>
       </section >
           {/* <div className="partners">

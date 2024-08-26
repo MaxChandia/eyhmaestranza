@@ -29,7 +29,7 @@ const Workplace = () => {
                 <p className="description">1020 x 540 x 510 1 Ton</p>
             </div >
             <div className="card" data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="500">
-                <img src='/photos/taller-image-1.jpg' alt="workshop4"></img>
+                <img src='/photos/taller-image-1.webp' alt="workshop4"></img>
                 <p className="title">Torno</p>
                 <p className="description"></p>
             </div>

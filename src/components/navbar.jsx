@@ -15,13 +15,15 @@ const Navbar = () => {
 
     const handleLinkClick = () => {
         document.getElementById('check').checked = false;
+        
     };
+
 
     return (
         <nav className="navbar">
             <div className="navbar-top">
                 <Link to="/">
-                    <img src='/photos/logo.png' data-aos="fade-right" data-aos-delay="0" alt="eyhmaestranza-logo" className="logo" />
+                    <img src='/photos/logo.webp' data-aos="fade-right" data-aos-delay="0" alt="eyhmaestranza-logo" className="logo" />
                 </Link>
                 <ul className="headerContact">
                     <li>
@@ -53,8 +55,8 @@ const Navbar = () => {
                             <Link to="/" className={hoveredItem === "Inicio" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Inicio")}
                                 onMouseLeave={() => setHoveredItem(null)}
-                                onClick={handleLinkClick}  // Aquí agregas el handleLinkClick
-                            >
+                                onClick={handleLinkClick}
+                                aria-label="Ir a la página principal">
                                 <p>INICIO</p>
                             </Link>
                         </li>
@@ -62,7 +64,8 @@ const Navbar = () => {
                             <Link to="/quienes-somos" className={hoveredItem === "Quienes somos" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Quienes somos")}
                                 onMouseLeave={() => setHoveredItem(null)}
-                                onClick={handleLinkClick}  // Aquí agregas el handleLinkClick
+                                onClick={handleLinkClick} 
+                                aria-label="Ir a pestaña Quiénes Somos"
                             >
                                 <p>QUIÉNES SOMOS</p>
                             </Link>
@@ -71,7 +74,8 @@ const Navbar = () => {
                             <Link to="/servicios" className={hoveredItem === "Servicios" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Servicios")}
                                 onMouseLeave={() => setHoveredItem(null)}
-                                onClick={handleLinkClick}  // Aquí agregas el handleLinkClick
+                                onClick={handleLinkClick}
+                                aria-label="Ir a pestaña Servicios"
                             >
                                 <p>SERVICIOS</p>
                             </Link>
@@ -80,7 +84,8 @@ const Navbar = () => {
                             <Link to="/nuestro-taller" className={hoveredItem === "Nuestro Taller" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Nuestro Taller")}
                                 onMouseLeave={() => setHoveredItem(null)}
-                                onClick={handleLinkClick}  // Aquí agregas el handleLinkClick
+                                onClick={handleLinkClick}
+                                aria-label="Ir a pestaña Nuestro Taller"
                             >
                                 <p>NUESTRO TALLER</p>
                             </Link>
@@ -89,7 +94,8 @@ const Navbar = () => {
                             <Link to="/contacto" className={hoveredItem === "Contacto" ? "hovered" : ""}
                                 onMouseEnter={() => setHoveredItem("Contacto")}
                                 onMouseLeave={() => setHoveredItem(null)}
-                                onClick={handleLinkClick}  // Aquí agregas el handleLinkClick
+                                onClick={handleLinkClick}
+                                aria-label="Ir a pestaña Contacto"
                             >
                                 <p>CONTACTO</p>
                             </Link>

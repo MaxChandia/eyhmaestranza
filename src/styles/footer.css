@@ -46,6 +46,12 @@
     margin-top: 15px;
 }
 
+.titleContainer {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
 @media (max-width: 912px) {
     .footerContainer {
         min-height: 1100px;

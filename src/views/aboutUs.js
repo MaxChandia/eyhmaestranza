@@ -18,7 +18,7 @@ const AboutUs = () => {
                 <p className="">Conscientes de la importancia de la calidad y la precisión en cada proyecto, en E&H Maestranza Limitada hemos enfocado nuestros esfuerzos en perfeccionar el servicio mediante la incorporación de mano de obra altamente calificada y el uso de tecnología innovadora. Este compromiso nos permite ofrecer soluciones eficientes y de vanguardia, garantizando la satisfacción de nuestros clientes y consolidando nuestra posición en el sector.</p>
             </div>
             <div className="aboutUsImage">
-                <img alt="workers" data-aos-duration="2000" src='photos/abouts-us-workers.jpg'/>
+                <img alt="workers" data-aos-duration="2000" src='photos/abouts-us-workers.webp'/>
             </div>           
         </div>
         <Footer/>
