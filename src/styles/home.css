@@ -35,11 +35,10 @@
 }
 
 .imageRowContainer {
-    height: 85vh;
+    height: auto;
     width: 100%;
     justify-content: center;
-    margin-bottom: 150px; 
-    
+    margin-bottom: 50px;
 }
 
 .imageRowTitle {
@@ -152,7 +151,7 @@
 
 .products {
     display: block;
-    height: 500px; 
+    height: auto;
     width: auto;
     text-align: center; 
     margin-bottom: 60px;
@@ -162,6 +161,10 @@
     margin-bottom: 50px;
     font-size: 30px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .imageProducts {
@@ -169,11 +172,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    flex-wrap: wrap; }
 
 .imageProducts img {
     height: 200px;
-    width: 300px;
+    width: auto;
     margin: 5px; 
     cursor: pointer;
 }
@@ -203,7 +206,6 @@
     max-height: 80vh;
     font-display: flex;
     align-items: center;
-    display: block;
     border: black;
     
   }
@@ -219,8 +221,34 @@
     cursor: pointer; 
   }
 
+    .arrowLeft {
+        color: azure;
+        position: absolute;
+        right: 100%;
+         bottom: 50%;
+         background-color: transparent;
+         width: 5%;
+         height: 10%;
+         font-size: 30px;
+         border: none;
+         cursor: pointer;
+    }
 
-@media (max-width: 912px) {
+    .arrowRight {
+        color: azure;
+        position: absolute;
+        left: 100%;
+        bottom:50%;
+        background-color: transparent;
+        width: 5%;
+        height: 10%;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+    }
+
+
+@media (max-width: 1024px) {
     
     .imageRowTitle {
         font-size: 20px;
@@ -235,11 +263,6 @@
         justify-content: center;
     }
 
-
-
-    .products {
-        height: auto;
-    }
     .imageProducts {
         flex-direction: column;
         align-items: center;
@@ -306,9 +329,6 @@
         align-items: center;
     }
 
-    .imageRowContainer {
-        margin-bottom: 550px;
-    }
 
     .imageContainer {
         width: 100%; 

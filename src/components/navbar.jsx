@@ -44,7 +44,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="NavPages" data-aos="fade-up" data-aos-duration="1000">
-                <img src='/photos/logo.png' alt="eyhmaestranza-logo" className="logo" />
+                <img src='/photos/logo.webp' alt="eyhmaestranza-logo" className="logo" />
                 <input type="checkbox" id="check" />
                 <label htmlFor="check" className="icons">
                     <FontAwesomeIcon icon={faBars} style={{ fontSize: '30px' }} />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Modal from 'react-modal';
 import Navbar from "../components/navbar";
@@ -7,16 +7,43 @@ import '../styles/navbar.css';
 import '../styles/home.css';
 import Carrousel from "../components/carrousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faGear, faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { Slides } from "../components/slides";
 
 const Home = () =>{
   const [showImage, setShowImage] = useState(false);
   const [selectedImage, setSelectedImage] =useState(null);
+  const [carrouselImages, setCarrouselImages] = useState ([]);
+  const [carrouselCurrentIndex, setCarrouselCurrentIndex] = useState (0);
+  
 
-  const openImage = (image) => {
-    setSelectedImage(image);
+   useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowRight") {
+        nextImg();
+      } else if (event.key === "ArrowLeft") {
+        previousImage();
+      }
+    };
+
+    // Agregar event listener al montar el componente
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Limpiar el event listener al desmontar el componente
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+
+  const openImage = (slide) => {
+    setSelectedImage(slide.src);
     setShowImage(true); 
   };
+
+  useEffect(() => {
+    setCarrouselImages(Slides); 
+  }, []);
 
   const closeImage = () => {
     setSelectedImage(null);
@@ -29,6 +56,21 @@ const Home = () =>{
     }
   };
 
+
+  const previousImage = () => {
+    setCarrouselCurrentIndex((prevIndex) => 
+      (prevIndex === 0 ? carrouselImages.length - 1 : prevIndex - 1)
+    );
+    setSelectedImage(carrouselImages[carrouselCurrentIndex].src);
+  };  
+
+  const nextImg = () => {
+    setCarrouselCurrentIndex((prevIndex) => 
+      (prevIndex === carrouselImages.length - 1 ? 0 : prevIndex + 1)
+    );
+    setSelectedImage(carrouselImages[carrouselCurrentIndex].src);
+  };
+
   return (
     <div className="App">
         <Navbar/>
@@ -37,7 +79,7 @@ const Home = () =>{
           <p data-aos="fade-in" data-aos-duration="1000">Más de 10 años contribuyendo al rubro de la metalmecánica</p>
         </div>
         <div className="workPlaceDescription" data-aos="fade-right" data-aos-duration="1000"  data-aos-delay="1000">
-          <img src='\photos\aaaaa.webp' alt="workDescription"></img>
+          <img src='/photos/aaaaa.webp' alt="workDescription"></img>
           <div className="descriptionText">
             <h1><b>En E&H Maestranza Ltda.</b></h1>
             <p>Contamos con implementos de última tecnología y personal especializado en cada área para satisfacer las necesidades de nuestros clientes. </p>
@@ -53,15 +95,15 @@ const Home = () =>{
             </div>
             <div className="imageRow" data-aos-duration="1000"  data-aos-delay="1000">
                 <div className="imageContainer">
-                    <img src='\photos\image-row-1.webp' alt="Service 1" />
+                    <img src='/photos/image-row-1.webp' alt="Service 1" />
                     <p className="imageText">Reparación y fabricación de  piezas y estructuras metálicas</p>
                 </div>
                 <div className="imageContainer">
-                    <img src='\photos\image-row-2.webp' alt="Service 2" />
+                    <img src='/photos/image-row-2.webp' alt="Service 2" />
                     <p className="imageText2">Trabajo de tornería y fresado</p>
                 </div>
                 <div className="imageContainer">
-                    <img src='\photos\image-row-3.webp' alt="Service 3" />
+                    <img src='/photos/image-row-3.webp' alt="Service 3" />
                     <p className="imageText2">Soldadura</p>
                 </div>
             </div>
@@ -69,20 +111,13 @@ const Home = () =>{
       <section className="products" data-aos="fade-up">
         <div className="titleProducts">
             <p>Conoce nuestros trabajos</p>
-            <div className="underline"></div>
         </div>
-        <div className="imageProducts" >
-                <img src="/photos/product-1.webp" alt="Producto 1" onClick={() => openImage("/photos/product-1.webp")}/>
-                <img src="/photos/product-2.webp" alt="Producto 2" onClick={() => openImage("/photos/product-2.webp")}/>
-                <img src="/photos/product-3.webp" alt="Producto 3" onClick={() => openImage("/photos/product-3.webp")}/>
-                <img src="/photos/product-4.webp" alt="Producto 4" onClick={() => openImage("/photos/product-4.webp")}/>
-            </div>
-            <div className="imageProducts">
-                <img src="/photos/product-5.jpeg" alt="Producto 5" onClick={() => openImage("/photos/product-5.jpg")}/>
-                <img src="/photos/product-6.webp"alt="Producto 6" onClick={() => openImage("/photos/product-6.webp")}/>
-                <img src="/photos/product-7.webp" alt="Producto 7" onClick={() => openImage("/photos/product-7.webp")}/>
-                <img src="/photos/product-8.webp" alt="Producto 8" onClick={() => openImage("/photos/product-8.webp")}/>
-            </div>
+          <div className="imageProducts">
+            {Slides.map((slide, index) => (
+              <img key={slide.id} src={slide.src} alt={slide.alt}
+                  onClick={() => openImage(slide, index)}></img>
+              ))};
+          </div>
       </section >
           {/* <div className="partners">
             <h1>
@@ -106,7 +141,14 @@ const Home = () =>{
               className="lightbox"
               overlayClassName="lightbox-overlay"
             >
-              {selectedImage && <img src={selectedImage} alt="Selected" />}
+              <button className="arrowLeft" onClick={previousImage}><FontAwesomeIcon icon={faArrowLeft} /></button>
+              <button className="arrowRight" onClick={nextImg}><FontAwesomeIcon icon={faArrowRight} /></button>
+              {selectedImage && (
+                  <img
+                    src={Slides[carrouselCurrentIndex]?.src}
+                    alt={Slides[carrouselCurrentIndex]?.alt || "Imagen"}
+                  />
+                )};
             </Modal>
     </div>
     );

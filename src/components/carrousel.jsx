@@ -17,7 +17,7 @@ const Carrousel = () => {
             <div className="slideTextContainer">
             <div className="slideText" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Aportando con excelencia a la industria minera</div>
             <Link to="/contacto">
-            <button className="slideButton" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1100">
+            <button className="slideButton">
                     Contáctenos
             </button>
             </Link>

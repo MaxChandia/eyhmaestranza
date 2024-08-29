@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Modal from 'react-modal';
 import '../styles/services.css'
-import { faGear} from "@fortawesome/free-solid-svg-icons";
+import { faGear, faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { Slides } from "../components/slides";
 
 const Services = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showImage, setShowImage] = useState(false);
     const [selectedImage, setSelectedImage] =useState(null);
+    const [carrouselImages, setCarrouselImages] = useState ([]);
+    const [carrouselCurrentIndex, setCarrouselCurrentIndex] = useState (0);
+    
 
     const images = [
         "/photos/carrousel-2.webp",
@@ -28,21 +31,58 @@ const Services = () => {
     };
 
     
-    const openImage = (image) => {
-        setSelectedImage(image);
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+          if (event.key === "ArrowRight") {
+            nextImg();
+          } else if (event.key === "ArrowLeft") {
+            previousImage();
+          }
+        };
+        window.addEventListener("keydown", handleKeyDown);
+    
+        return () => {
+          window.removeEventListener("keydown", handleKeyDown);
+        };
+      }, []);
+    
+    
+      const openImage = (slide) => {
+        setSelectedImage(slide.src);
         setShowImage(true); 
-    };
-
-    const closeImage = () => {
+      };
+    
+      useEffect(() => {
+        setCarrouselImages(Slides); 
+      }, []);
+    
+      const closeImage = () => {
         setSelectedImage(null);
         setShowImage(false);
-    };
- 
-  const handleOverlayClick = (event) => {
-    if (event.target === event.currentTarget) {
-      closeImage();
-    }
-  };
+      };
+     
+      const handleOverlayClick = (event) => {
+        if (event.target === event.currentTarget) {
+          closeImage();
+        }
+      };
+    
+    
+      const previousImage = () => {
+        setCarrouselCurrentIndex((prevIndex) => {
+          const newIndex = prevIndex === 0 ? carrouselImages.length - 1 : prevIndex - 1;
+          setSelectedImage(carrouselImages[newIndex]?.src || ""); 
+          return newIndex;
+        });
+      };  
+      
+      const nextImg = () => {
+        setCarrouselCurrentIndex((prevIndex) => {
+          const newIndex = prevIndex === carrouselImages.length - 1 ? 0 : prevIndex + 1;
+          setSelectedImage(carrouselImages[newIndex]?.src || ""); 
+          return newIndex;
+        });
+      };
     
 
     return (
@@ -75,16 +115,10 @@ const Services = () => {
                 <div className="underline"></div>
             </div>
             <div className="imageProducts" >
-                <img src="/photos/product-1.webp" alt="Producto 1" onClick={() => openImage("/photos/product-1.webp")}/>
-                <img src="/photos/product-2.webp" alt="Producto 2" onClick={() => openImage("/photos/product-2.webp")}/>
-                <img src="/photos/product-3.webp" alt="Producto 3" onClick={() => openImage("/photos/product-3.webp")}/>
-                <img src="/photos/product-4.webp" alt="Producto 4" onClick={() => openImage("/photos/product-4.webp")}/>
-            </div>
-            <div className="imageProducts">
-                <img src="/photos/product-5.jpeg" alt="Producto 5" onClick={() => openImage("/photos/product-5.jpeg")}/>
-                <img src="/photos/product-6.webp"alt="Producto 6" onClick={() => openImage("/photos/product-6.webp")}/>
-                <img src="/photos/product-7.webp" alt="Producto 7" onClick={() => openImage("/photos/product-7.webp")}/>
-                <img src="/photos/product-8.webp" alt="Producto 8" onClick={() => openImage("/photos/product-8.webp")}/>
+                {Slides.map((slide, index) => (
+              <img key={slide.id} src={slide.src} alt={slide.alt}
+                  onClick={() => openImage(slide, index)}></img>
+              ))};
             </div>
         </section >
             <Footer/>
@@ -96,7 +130,14 @@ const Services = () => {
               className="lightbox"
               overlayClassName="lightbox-overlay"
             >
-              {selectedImage && <img src={selectedImage} alt="Selected" />}
+              <button className="arrowLeft" onClick={previousImage}><FontAwesomeIcon icon={faArrowLeft} /></button>
+              <button className="arrowRight" onClick={nextImg}><FontAwesomeIcon icon={faArrowRight} /></button>
+              {selectedImage && (
+                  <img
+                    src={Slides[carrouselCurrentIndex]?.src}
+                    alt={Slides[carrouselCurrentIndex]?.alt || "Imagen"}
+                  />
+                )};
             </Modal>
         </div>
     )
