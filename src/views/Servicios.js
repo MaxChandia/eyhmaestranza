@@ -39,6 +39,7 @@ const Services = () => {
             previousImage();
           }
         };
+    
         window.addEventListener("keydown", handleKeyDown);
     
         return () => {
@@ -71,18 +72,18 @@ const Services = () => {
       const previousImage = () => {
         setCarrouselCurrentIndex((prevIndex) => {
           const newIndex = prevIndex === 0 ? carrouselImages.length - 1 : prevIndex - 1;
-          setSelectedImage(carrouselImages[newIndex]?.src || ""); 
+          setSelectedImage(carrouselImages[newIndex].src); 
           return newIndex;
         });
-      };  
+      };
       
       const nextImg = () => {
         setCarrouselCurrentIndex((prevIndex) => {
           const newIndex = prevIndex === carrouselImages.length - 1 ? 0 : prevIndex + 1;
-          setSelectedImage(carrouselImages[newIndex]?.src || ""); 
+          setSelectedImage(carrouselImages[newIndex].src); 
           return newIndex;
         });
-      };
+    };
     
 
     return (

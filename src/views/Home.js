@@ -26,10 +26,8 @@ const Home = () =>{
       }
     };
 
-    // Agregar event listener al montar el componente
     window.addEventListener("keydown", handleKeyDown);
 
-    // Limpiar el event listener al desmontar el componente
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
@@ -58,19 +56,20 @@ const Home = () =>{
 
 
   const previousImage = () => {
-    setCarrouselCurrentIndex((prevIndex) => 
-      (prevIndex === 0 ? carrouselImages.length - 1 : prevIndex - 1)
-    );
-    setSelectedImage(carrouselImages[carrouselCurrentIndex].src);
-  };  
-
-  const nextImg = () => {
-    setCarrouselCurrentIndex((prevIndex) => 
-      (prevIndex === carrouselImages.length - 1 ? 0 : prevIndex + 1)
-    );
-    setSelectedImage(carrouselImages[carrouselCurrentIndex].src);
+    setCarrouselCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex === 0 ? carrouselImages.length - 1 : prevIndex - 1;
+      setSelectedImage(carrouselImages[newIndex].src); 
+      return newIndex;
+    });
   };
-
+  
+  const nextImg = () => {
+    setCarrouselCurrentIndex((prevIndex) => {
+      const newIndex = prevIndex === carrouselImages.length - 1 ? 0 : prevIndex + 1;
+      setSelectedImage(carrouselImages[newIndex].src); 
+      return newIndex;
+    });
+  };
   return (
     <div className="App">
         <Navbar/>
@@ -79,7 +78,7 @@ const Home = () =>{
           <p data-aos="fade-in" data-aos-duration="1000">Más de 10 años contribuyendo al rubro de la metalmecánica</p>
         </div>
         <div className="workPlaceDescription" data-aos="fade-right" data-aos-duration="1000"  data-aos-delay="1000">
-          <img src='/photos/aaaaa.webp' alt="workDescription"></img>
+          <img src='/photos/work-1.jpg' alt="workDescription"></img>
           <div className="descriptionText">
             <h1><b>En E&H Maestranza Ltda.</b></h1>
             <p>Contamos con implementos de última tecnología y personal especializado en cada área para satisfacer las necesidades de nuestros clientes. </p>

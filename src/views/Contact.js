@@ -20,20 +20,32 @@ const ContactPage = () => {
 
     const clearContactInfo = (e) => {
         e.preventDefault();
+    
 
         if (!contactInfo.nombre || !contactInfo.telefono || !contactInfo.ciudad || !contactInfo.email || !contactInfo.Comentario) {
             alert("Todos los campos son obligatorios.");
             return;
         }
+    
 
         emailjs.send(
-            'service_dx4jngs',
+            'service_xutgngn', 
             'template_b2w35om',
-            contactInfo,
-            'i5bpqOQH5kvoK7dZ5'
+            {
+                to_name: 'contacto@eyhmaestranza.cl',
+                from_name: contactInfo.nombre, 
+                message: contactInfo.Comentario, 
+                reply_to: contactInfo.email,
+                from_email: 'contacto@eyhmaestranza.cl', 
+                ciudad: contactInfo.ciudad, 
+                telefono: contactInfo.telefono, 
+                to_email: 'maximiliano.chandiaf@gmail.com' 
+            },
+            'i5bpqOQH5kvoK7dZ5' 
         )
         .then((result) => {
-            alert("Correo enviado correctamente");
+            console.log('Email enviado:', result.text);
+            alert('Formulario enviado exitosamente.');
             setContactInfo({
                 nombre: '',
                 telefono: '',
@@ -42,7 +54,8 @@ const ContactPage = () => {
                 Comentario: ''
             });
         }, (error) => {
-            alert("Hubo un problema al enviar los datos");
+            console.error('Error al enviar el formulario:', error.text);
+            alert('Error al enviar el formulario, por favor intenta de nuevo.');
         });
     };
 
