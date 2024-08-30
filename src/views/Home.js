@@ -17,17 +17,17 @@ const Home = () =>{
   const [carrouselCurrentIndex, setCarrouselCurrentIndex] = useState (0);
   
 
-   useEffect(() => {
+  useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowRight") {
-        nextImg();
+        document.querySelector(".arrowRight").click();
       } else if (event.key === "ArrowLeft") {
-        previousImage();
+        document.querySelector(".arrowLeft").click();
       }
     };
-
+  
     window.addEventListener("keydown", handleKeyDown);
-
+  
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
