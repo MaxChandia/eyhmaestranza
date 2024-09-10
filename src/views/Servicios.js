@@ -90,27 +90,27 @@ const Services = () => {
         <div className="servicesContainer" >
              <Navbar/>
              
-            <div className="servicesHeader" data-aos="fade-in" data-aos-duration="1000">
-                <img className="serviceImage" alt="serviceImage" src='/photos/services-header.webp'></img>
-                <h1 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">EN NUESTRO TALLER GARANTIZAMOS EXCELENTES RESULTADOS</h1>
+            <div className="servicesHeader">
+                <img className="serviceImage animate-on-scroll animate-right" alt="serviceImage" src='/photos/services-header.webp'></img>
+                <h1 className="animate-on-scroll">EN NUESTRO TALLER GARANTIZAMOS EXCELENTES RESULTADOS</h1>
             </div>
-            <section className="serviceCardContainer" data-aos="fade-right" data-aos-duration="1000">
+            <section className="serviceCardContainer animate-on-scroll animate-right" >
                 <div className="servicesCard">
-                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500"> <FontAwesomeIcon icon={faGear}  /> Servicios</p>
+                    <p className="servicesTitleCard animate-on-scroll animate-right"> <FontAwesomeIcon icon={faGear}  /> Servicios</p>
                     <ul>
-                        <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500"> &gt; Fabricación de estructuras y piezas metálicas</li>
-                        <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600"> &gt; Reparación de componentes industriales</li>
-                        <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700"> &gt; Trabajo de tornería y fresado</li>
-                        <li data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800"> &gt; Soldadura</li>
+                        <li className="animate-on-scroll animate-right"> &gt; Fabricación de estructuras y piezas metálicas</li>
+                        <li className="animate-on-scroll animate-right"> &gt; Reparación de componentes industriales</li>
+                        <li className="animate-on-scroll animate-right"> &gt; Trabajo de tornería y fresado</li>
+                        <li className="animate-on-scroll animate-right"> &gt; Soldadura</li>
                     </ul>
                 </div>
-                <div className="serviceCardImage">
+                <div className="serviceCardImage ">
                     <button onClick={handlePrevClick}>&lt;</button>
                     <img src={images[currentIndex]} alt="Servicios" />
                     <button onClick={handleNextClick}>&gt;</button>
                 </div>
             </section >
-        <section  className="productService">
+        <section  className="productService animate-on-scroll animate-up">
             <div className="titleProducts">
                 <p>Los calidad de nuestros trabajos demuestran nuestro compromiso</p>
                 <div className="underline"></div>

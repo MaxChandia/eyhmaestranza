@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Carrousel = () => {
     return(
-        <div className="slideContainer" data-aos="fade-in">
+        <div className="slideContainer animation-fade-in" >
                <iframe 
                 width="560" 
                 height="315" 
@@ -15,7 +15,7 @@ const Carrousel = () => {
                 title="Maestranza">
             </iframe>
             <div className="slideTextContainer">
-            <div className="slideText" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Aportando con excelencia a la industria minera</div>
+            <div className="slideText animate-on-scroll animate-right" >Aportando con excelencia a la industria minera</div>
             <Link to="/contacto">
             <button className="slideButton">
                     Contáctenos

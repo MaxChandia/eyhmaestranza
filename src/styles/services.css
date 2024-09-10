@@ -14,7 +14,8 @@
 }
 
 .servicesHeader img {
-    width: 100%
+    width: 100%;
+    transition-delay: 1s;
 }
 
 .servicesHeader h1 {
@@ -24,6 +25,7 @@
     right: 5%;
     width: 50%;
     text-align: end;
+    transition-delay: 1.5s;
 }
 
 .serviceCardContainer {
@@ -46,6 +48,7 @@
     font-weight: 600;
     padding-top: 80px;
     padding-left: 100px;
+    transition-delay: 1200ms;
 }
 
 .servicesCard ul {
@@ -58,6 +61,22 @@
     font-weight: 500;
 }
 
+.servicesCard ul :nth-child(1) {
+    transition-delay: 1700ms;
+}
+
+.servicesCard ul :nth-child(2) {
+    transition-delay: 1900ms;
+}
+
+.servicesCard ul :nth-child(3) {
+    transition-delay: 2100ms;
+}
+
+.servicesCard ul :nth-child(4) {
+    transition-delay: 2300ms;
+}
+
 .serviceCardImage {
     position: relative;
     width: 50%;
@@ -67,7 +86,6 @@
 .serviceCardImage img{
     width: 100%;
     height: 100%;
-    transition: opacity 0.5s ease-in-out
 }
 
 .serviceCardImage button {

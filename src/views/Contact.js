@@ -63,18 +63,18 @@ const ContactPage = () => {
         <div>
             <Navbar />
             <div className="contactPageContainer">
-                <div className="imageContactContainer" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+                <div className="imageContactContainer animate-on-scroll animate-right"              >
                     <img alt="contactImage" src='photos/contact-image.webp'></img>
                 </div>
                 <div className="contactPageContact">
                     <div className="contactPageData">
                         <ul>
-                            <li className="titleContact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"><h1>Contáctanos</h1></li>
-                            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">Para cotizar o conocer sobre nuestros servicios no dude en contactarnos a través de los siguientes medios:</li>
+                            <li className="titleContact animate-on-scroll animate-up" ><h1>Contáctanos</h1></li>
+                            <li className="animate-on-scroll animate-up">Para cotizar o conocer sobre nuestros servicios no dude en contactarnos a través de los siguientes medios:</li>
                         </ul>
                     </div>
                     <div className="contactPageBottom">
-                        <div className="formulario" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500">
+                        <div className="formulario animate-on-scroll animate-up" >
                             <form onSubmit={clearContactInfo}>
                                 <div className="grupo">
                                     <input 
@@ -128,7 +128,7 @@ const ContactPage = () => {
                                 </div>
                             </form>
                         </div>
-                        <div className="contactPageChannels" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">
+                        <div className="contactPageChannels animate-on-scroll animate-up">
                             <ul>
                                 <li>Teléfono:</li>
                                 <li>+55 2 895698</li>
@@ -140,16 +140,16 @@ const ContactPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="mapText" data-aos="fade-in" data-aos-duration="1000">
-                <p data-aos="fade-up" data-aos-duration="1000">
+            <div className="mapText">
+                <p className="animate-on-scroll animate-up">
                     También puedes encontrarnos en Avenida Industrial 7720, Galpón 28 del
                     Parque Industrial AGPIA 
                 </p>
-                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <p className="animate-on-scroll animate-up">
                     Entre las avenidas Radomiro Tomic y Pedro Aguirre Cerda
                 </p>
             </div>
-            <div className="map" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">
+            <div className="map">
                 <iframe title="mapsecond" alt="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1292.6366160212824!2d-70.38654535358513!3d-23.59972520931845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96ae2b00176ab64f%3A0xfc2f31e3d356c459!2sEyH%20Maestranza%20Ltda.!5e0!3m2!1ses!2scl!4v1715152061691!5m2!1ses!2scl"
                     width="auto" 
                     height="500px" 

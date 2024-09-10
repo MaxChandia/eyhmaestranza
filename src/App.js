@@ -5,13 +5,11 @@ import ContactPage from './views/Contact';
 import Workplace from './views/Taller';
 import Services from './views/Servicios';
 import ScrollToTop from './components/scrollToTop';
-import Navbar from './components/navbar';
 
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop/>
-      <Navbar/>
       <Routes>
         <Route element={<Home/>} path='/'/>
         <Route element={<AboutUs/>} path='/quienes-somos'/>

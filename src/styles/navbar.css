@@ -46,6 +46,7 @@
 
 .NavPages {
     background-color: rgb(4, 4, 53);
+    transition-delay: 1.5s;
 }
 
 .NavPages ul {
@@ -79,6 +80,18 @@
 .hovered {
     background-color: rgb(29, 29, 103);
 }
+
+.animate-left {
+    opacity: 0;
+    transform: translateX(100px); 
+    transition: opacity 1s ease-out 1s, transform 1s ease-out 1s;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
 
 @media (max-width: 768px) {
     .navbar {

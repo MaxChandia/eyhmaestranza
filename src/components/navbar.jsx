@@ -3,47 +3,59 @@ import '../styles/navbar.css';
 import { Link } from "react-router-dom";
 import { faPhone, faEnvelope, faLocationDot, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Navbar = () => {
-    const [hoveredItem, setHoveredItem] = useState(null);
-
-    useEffect(() => {
-        AOS.init({duration: 2000, once: true});
-    }, []);
+    const [hoveredItem, setHoveredItem] = useState(null)
 
     const handleLinkClick = () => {
         document.getElementById('check').checked = false;
         
     };
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate'); 
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+    
+        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+          observer.observe(element);
+        });
+    
+        return () => observer.disconnect(); 
+      }, []);
+
 
     return (
         <nav className="navbar">
             <div className="navbar-top">
                 <Link to="/">
-                    <img src='/photos/logo.webp' data-aos="fade-right" data-aos-delay="0" alt="eyhmaestranza-logo" className="logo" />
+                    <img src='/photos/logo.webp' alt="eyhmaestranza-logo" className="logo animate-on-scroll animate-right" />
                 </Link>
                 <ul className="headerContact">
                     <li>
-                        <p data-aos="fade-left" data-aos-delay="0" data-aos-duration="10000">
+                        <p className="animate-on-scroll animate-left">
                             <FontAwesomeIcon icon={faPhone} style={{ fontSize: '15px' }} /> +55 2 895698 | +56 9 42663481
                         </p>
                     </li>
                     <li>
-                        <p data-aos="fade-left" data-aos-delay="0">
+                        <p className="animate-on-scroll animate-left" >
                             <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '15px' }} /> negocios@eyhmaestranza.cl
                         </p>
                     </li>
                     <li>
-                        <p data-aos="fade-left" data-aos-delay="0" className="direction">
+                        <p   className="direction animate-on-scroll animate-left">
                             <FontAwesomeIcon icon={faLocationDot} /> Avenida Industrial 7720 Galpón 28
                         </p>
                     </li>
                 </ul>
             </div>
-            <div className="NavPages" data-aos="fade-up" data-aos-duration="1000">
+            <div className="NavPages animate-on-scroll animate-up">
                 <img src='/photos/logo.webp' alt="eyhmaestranza-logo" className="logo" />
                 <input type="checkbox" id="check" />
                 <label htmlFor="check" className="icons">

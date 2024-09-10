@@ -7,6 +7,7 @@
 
 .aboutUsContainer {
     width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -19,6 +20,7 @@
     max-width: 100%; 
     background-color: rgba(196, 196, 196, 0.126);
     padding: 20px; 
+    transition-delay: 1s;
 }
 
 .aboutUsDescription {
@@ -50,6 +52,7 @@
 .aboutUsImage {
     height: 50%;
     width: 50%;
+    transition-delay: 1.5s;
    
 }
 
@@ -64,7 +67,6 @@
     display: flex;
     text-align: center;
 }
-
 
 
 @media (max-width:912px) {
