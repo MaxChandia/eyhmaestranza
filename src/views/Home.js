@@ -76,7 +76,7 @@ const Home = () => {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.05 });
 
     document.querySelectorAll('.animate-on-scroll').forEach((element) => {
       observer.observe(element);
@@ -121,7 +121,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="products animate-on-scroll animate-fade-up">
+      <section className="products">
         <div className="titleProducts">
           <p>Conoce nuestros trabajos</p>
         </div>

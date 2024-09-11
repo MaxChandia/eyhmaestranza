@@ -110,7 +110,7 @@ const Services = () => {
                     <button onClick={handleNextClick}>&gt;</button>
                 </div>
             </section >
-        <section  className="productService animate-on-scroll animate-up">
+        <section  className="productService">
             <div className="titleProducts">
                 <p>Los calidad de nuestros trabajos demuestran nuestro compromiso</p>
                 <div className="underline"></div>

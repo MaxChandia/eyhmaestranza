@@ -99,5 +99,6 @@
 
     .aboutUsImage {
         width: 100%;
+        transition-delay: 0.5s;
     }
 }

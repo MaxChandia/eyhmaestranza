@@ -13,27 +13,27 @@ const Workplace = () => {
             <p className="secondTitle animate-on-scroll animate-left">Asegurando a nuestros clientes la mejor calidad del mercado</p>
        </div>
        <div className="workshopCards">
-        <div className="card">
+        <div className="card animate-on-scroll animate-up">
                 <img src='/photos/taller-image-5.webp' alt="workshop1"></img>
                 <p className="title">Torno CNC</p>
                 <p className="description">720 x 2500</p>
             </div>
-            <div className="card">
+            <div className="card animate-on-scroll animate-up">
                 <img src='/photos/taller-image-2.webp' alt="workshop2"></img>
                 <p className="title">Fresadora de Torreta</p>
                 <p className="description"></p>
             </div>
-            <div className="card">
+            <div className="card animate-on-scroll animate-up">
                 <img src='/photos/taller-image-4.webp' alt="workshop3"></img>
                 <p className="title">Centro Mecanizado CNC</p>
                 <p className="description">1020 x 540 x 510 1 Ton</p>
             </div >
-            <div className="card"  >
+            <div className="card animate-on-scroll animate-up"  >
                 <img src='/photos/taller-image-1.webp' alt="workshop4"></img>
                 <p className="title">Torno</p>
                 <p className="description"></p>
             </div>
-            <div className="card">
+            <div className="card animate-on-scroll animate-up">
                 <img src='/photos/taller-image-6.webp' alt="workshop5"></img>
                 <p className="title">Soldadoras</p>
                 <p className="description"></p>
