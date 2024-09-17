@@ -68,6 +68,10 @@
     transition-delay: 1000ms;
 }
 
+.workshopCards :nth-child(6 ) {
+    transition-delay: 1200ms;
+}
+
 .card {
     height: 400px;
     width: 100%;
@@ -101,9 +105,6 @@
     color: brown;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
 
 
 @media (max-width:912px) {

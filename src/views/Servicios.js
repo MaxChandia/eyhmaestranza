@@ -16,10 +16,10 @@ const Services = () => {
     
 
     const images = [
-        "/photos/carrousel-2.webp",
-        "/photos/carrousel-3.webp",
-        "/photos/carrousel-4.webp",
-        "/photos/carrousel-1.webp"
+        "/photos/carrousel-2.jpg",
+        "/photos/carrousel-3.jpg",
+        "/photos/carrousel-4.jpg",
+        "/photos/carrousel-1.jpg"
     ];
 
     const handlePrevClick = () => {
@@ -90,10 +90,10 @@ const Services = () => {
         <div className="servicesContainer" >
              <Navbar/>
              
-            <div className="servicesHeader">
+            {/*<div className="servicesHeader">
                 <img className="serviceImage animate-on-scroll animate-right" alt="serviceImage" src='/photos/services-header.webp'></img>
                 <h1 className="animate-on-scroll">EN NUESTRO TALLER GARANTIZAMOS EXCELENTES RESULTADOS</h1>
-            </div>
+            </div> */}
             <section className="serviceCardContainer animate-on-scroll animate-right" >
                 <div className="servicesCard">
                     <p className="servicesTitleCard animate-on-scroll animate-right"> <FontAwesomeIcon icon={faGear}  /> Servicios</p>

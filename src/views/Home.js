@@ -32,8 +32,9 @@ const Home = () => {
     };
   }, []);
 
-  const openImage = (slide) => {
+  const openImage = (slide, index) => {
     setSelectedImage(slide.src);
+    setCarrouselCurrentIndex(index);
     setShowImage(true);
   };
 
@@ -44,6 +45,7 @@ const Home = () => {
   const closeImage = () => {
     setSelectedImage(null);
     setShowImage(false);
+    setCarrouselCurrentIndex(0);
   };
 
   const handleOverlayClick = (event) => {
@@ -108,28 +110,32 @@ const Home = () => {
         </div>
         <div className="imageRow ">
           <div className="imageContainer">
-            <img src='/photos/image-row-1.webp' alt="Service 1" />
+            <img src='/photos/image-row-1.jpg' alt="Service 1" />
             <p className="imageText">Reparación y fabricación de piezas y estructuras metálicas</p>
           </div>
           <div className="imageContainer">
-            <img src='/photos/image-row-2.webp' alt="Service 2" />
+            <img src='/photos/image-row-2.jpg' alt="Service 2" />
             <p className="imageText2">Trabajo de tornería y fresado</p>
           </div>
           <div className="imageContainer">
-            <img src='/photos/image-row-3.webp' alt="Service 3" />
+            <img src='/photos/image-row-4.jpg' alt="Service 3" />
+            <p className="imageText2">Centro Mecanizado</p>
+          </div>
+          <div className="imageContainer">
+            <img src='/photos/image-row-3.jpg' alt="Service 3" />
             <p className="imageText2">Soldadura</p>
           </div>
         </div>
       </section>
-      <section className="products">
+      <section className="products animate-on-scroll animate-">
         <div className="titleProducts">
           <p>Conoce nuestros trabajos</p>
         </div>
         <div className="imageProducts">
           {Slides.map((slide, index) => (
-            <img key={slide.id} src={slide.src} alt={slide.alt}
-              onClick={() => openImage(slide, index)}></img>
-          ))}
+          <img key={slide.id} loading="lazy" fetchPriority="high" src={slide.src} alt={slide.alt}
+                onClick={() => openImage(slide, index)}></img>
+            ))}
         </div>
       </section>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1292.6366160212824!2d-70.38654535358513!3d-23.59972520931845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96ae2b00176ab64f%3A0xfc2f31e3d356c459!2sEyH%20Maestranza%20Ltda.!5e0!3m2!1ses!2scl!4v1715152061691!5m2!1ses!2scl"
@@ -153,6 +159,7 @@ const Home = () => {
         <button className="arrowRight" onClick={nextImg}><FontAwesomeIcon icon={faArrowRight} /></button>
         {selectedImage && (
           <img
+            loading="lazy"
             src={Slides[carrouselCurrentIndex]?.src}
             alt={Slides[carrouselCurrentIndex]?.alt || "Imagen"}
           />

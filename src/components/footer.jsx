@@ -23,7 +23,7 @@ const Footer = () =>{
                     <li><p className="titleContainer">Visítanos</p></li>
                     <li>Avenida Industrial 7720, Galpón 28</li>
                     <li>Parque Industrial AGPIA, Antofagasta</li>
-                    <li>Lunes a Viernes</li>
+                    <li>Lunes a Viernes 08:00 a 17:00 </li>
                 </ul>
            </div>
            <div className="contactContain">

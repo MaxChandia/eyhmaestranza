@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import '../styles/navbar.css';
 import { Link } from "react-router-dom";
 import { faPhone, faEnvelope, faLocationDot, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import 'aos/dist/aos.css';
 
 const Navbar = () => {
-    const [hoveredItem, setHoveredItem] = useState(null)
 
     const handleLinkClick = () => {
         document.getElementById('check').checked = false;
@@ -64,18 +62,14 @@ const Navbar = () => {
                 <div className="NavPageList">
                     <ul>
                         <li>
-                            <Link to="/" className={hoveredItem === "Inicio" ? "hovered" : ""}
-                                onMouseEnter={() => setHoveredItem("Inicio")}
-                                onMouseLeave={() => setHoveredItem(null)}
+                            <Link to="/"
                                 onClick={handleLinkClick}
                                 aria-label="Ir a la página principal">
                                 <p>INICIO</p>
                             </Link>
                         </li>
                         <li>
-                            <Link to="/quienes-somos" className={hoveredItem === "Quienes somos" ? "hovered" : ""}
-                                onMouseEnter={() => setHoveredItem("Quienes somos")}
-                                onMouseLeave={() => setHoveredItem(null)}
+                            <Link to="/quienes-somos"
                                 onClick={handleLinkClick} 
                                 aria-label="Ir a pestaña Quiénes Somos"
                             >
@@ -83,9 +77,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/servicios" className={hoveredItem === "Servicios" ? "hovered" : ""}
-                                onMouseEnter={() => setHoveredItem("Servicios")}
-                                onMouseLeave={() => setHoveredItem(null)}
+                            <Link to="/servicios"                        
                                 onClick={handleLinkClick}
                                 aria-label="Ir a pestaña Servicios"
                             >
@@ -93,9 +85,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/nuestro-taller" className={hoveredItem === "Nuestro Taller" ? "hovered" : ""}
-                                onMouseEnter={() => setHoveredItem("Nuestro Taller")}
-                                onMouseLeave={() => setHoveredItem(null)}
+                            <Link to="/nuestro-taller"                               
                                 onClick={handleLinkClick}
                                 aria-label="Ir a pestaña Nuestro Taller"
                             >
@@ -103,10 +93,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/contacto" className={hoveredItem === "Contacto" ? "hovered" : ""}
-                                onMouseEnter={() => setHoveredItem("Contacto")}
-                                onMouseLeave={() => setHoveredItem(null)}
-                                onClick={handleLinkClick}
+                            <Link to="/contacto" onClick={handleLinkClick}
                                 aria-label="Ir a pestaña Contacto"
                             >
                                 <p>CONTACTO</p>

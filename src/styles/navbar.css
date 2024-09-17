@@ -71,7 +71,13 @@
     color: white;
     text-transform: uppercase;
     cursor: pointer;
+    
 }
+
+.NavPages a {
+    text-decoration: none;
+}
+
 
 .NavPages img {
     display: none;
