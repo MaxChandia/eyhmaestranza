@@ -110,6 +110,11 @@
 @media (max-width:912px) {
     .headerWorkshop {
         height: 80vh
+        
+    }
+
+    .headerWorkshop img {
+        object-position: 18% 50%;
     }
 
     .headerWorkshop p {
@@ -145,13 +150,18 @@
         padding: 10px;
     }
     
+    
 }
 
 @media (max-width: 375px) and (max-height: 667px) {
     
 
+    .headerWorkshop img {
+        object-position: center;
+    }
+
     .workshopCards {
-        height: 320vh;
+        height: auto;
     }
 
     

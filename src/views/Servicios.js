@@ -48,8 +48,9 @@ const Services = () => {
       }, []);
     
     
-      const openImage = (slide) => {
+      const openImage = (slide, index) => {
         setSelectedImage(slide.src);
+        setCarrouselCurrentIndex(index);
         setShowImage(true); 
       };
     
@@ -59,6 +60,7 @@ const Services = () => {
     
       const closeImage = () => {
         setSelectedImage(null);
+        setCarrouselCurrentIndex(0);
         setShowImage(false);
       };
      
@@ -101,16 +103,17 @@ const Services = () => {
                         <li className="animate-on-scroll animate-right"> &gt; Fabricación de estructuras y piezas metálicas</li>
                         <li className="animate-on-scroll animate-right"> &gt; Reparación de componentes industriales</li>
                         <li className="animate-on-scroll animate-right"> &gt; Trabajo de tornería y fresado</li>
+                        <li className="animate-on-scroll animate-right"> &gt; Centro Mecanizado</li>
                         <li className="animate-on-scroll animate-right"> &gt; Soldadura</li>
                     </ul>
                 </div>
-                <div className="serviceCardImage ">
+                <div className="serviceCardImage">
                     <button onClick={handlePrevClick}>&lt;</button>
                     <img src={images[currentIndex]} alt="Servicios" />
                     <button onClick={handleNextClick}>&gt;</button>
                 </div>
             </section >
-        <section  className="productService">
+        <section  className="productService animate-on-scroll animate-up">
             <div className="titleProducts">
                 <p>Los calidad de nuestros trabajos demuestran nuestro compromiso</p>
                 <div className="underline"></div>

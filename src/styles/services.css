@@ -77,6 +77,10 @@
     transition-delay: 2300ms;
 }
 
+.servicesCard ul :nth-child(5) {
+    transition-delay: 2500ms;
+}
+
 .serviceCardImage {
     position: relative;
     width: 50%;

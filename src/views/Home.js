@@ -118,12 +118,12 @@ const Home = () => {
             <p className="imageText2">Trabajo de tornería y fresado</p>
           </div>
           <div className="imageContainer">
-            <img src='/photos/image-row-4.jpg' alt="Service 3" />
-            <p className="imageText2">Centro Mecanizado</p>
-          </div>
-          <div className="imageContainer">
             <img src='/photos/image-row-3.jpg' alt="Service 3" />
             <p className="imageText2">Soldadura</p>
+          </div>
+          <div className="imageContainer">
+            <img src='/photos/image-row-4.jpg' alt="Service 3" />
+            <p className="imageText2">Centro Mecanizado</p>
           </div>
         </div>
       </section>
