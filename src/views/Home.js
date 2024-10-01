@@ -111,7 +111,7 @@ const Home = () => {
         <div className="imageRow ">
           <div className="imageContainer">
             <img src='/photos/image-row-1.jpg' alt="Service 1" />
-            <p className="imageText">Reparación y fabricación de piezas y estructuras metálicas</p>
+            <p className="imageText">Reparación y fabricación de componentes metálicos</p>
           </div>
           <div className="imageContainer">
             <img src='/photos/image-row-2.jpg' alt="Service 2" />
@@ -148,23 +148,27 @@ const Home = () => {
         referrerPolicy="no-referrer-when-downgrade" />
       <Footer />
       <Modal
-        isOpen={showImage}
-        onRequestClose={closeImage}
-        onClick={handleOverlayClick}
-        contentLabel="Image Lightbox"
-        className="lightbox"
-        overlayClassName="lightbox-overlay"
-      >
-        <button className="arrowLeft" onClick={previousImage}><FontAwesomeIcon icon={faArrowLeft} /></button>
-        <button className="arrowRight" onClick={nextImg}><FontAwesomeIcon icon={faArrowRight} /></button>
-        {selectedImage && (
-          <img
+    isOpen={showImage}
+    onRequestClose={closeImage}
+    onClick={handleOverlayClick}
+    contentLabel="Image Lightbox"
+    className="lightbox"
+    overlayClassName="lightbox-overlay"
+>
+    <button className="arrowLeft" onClick={previousImage}>
+        <FontAwesomeIcon icon={faArrowLeft} />
+    </button>
+    <button className="arrowRight" onClick={nextImg}>
+        <FontAwesomeIcon icon={faArrowRight} />
+    </button>
+    {selectedImage && (
+        <img
             loading="lazy"
             src={Slides[carrouselCurrentIndex]?.src}
             alt={Slides[carrouselCurrentIndex]?.alt || "Imagen"}
-          />
-        )}
-      </Modal>
+        />
+    )}
+</Modal>
     </div>
   );
 };
