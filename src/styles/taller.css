@@ -39,12 +39,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     justify-content: center;
-    gap: 20px; 
-    padding: 20px;
-    margin: 50px 0;
-    margin-left: 70px; 
-    max-width: calc(100% - 100px); 
     box-sizing: border-box;
+    gap: 50px;
+    padding: 100px;
 }
 
 
@@ -75,12 +72,9 @@
 .card {
     height: 400px;
     width: 100%;
-    max-width: 400px; 
     border-radius: 15px;
     margin-bottom: 50px;
     box-shadow: 4px 4px 8px 4px  rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    
 }
 
 .card img {
@@ -133,17 +127,16 @@
     }
 
     .workshopCards {
-        margin: 50px auto;
         display: block;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: auto;
+        padding: 50px;
     }
 
     .card {
         width: 100%;
-        height: auto;
+        height: 400px;
     }
 
     .card p {
@@ -158,10 +151,6 @@
 
     .headerWorkshop img {
         object-position: center;
-    }
-
-    .workshopCards {
-        height: auto;
     }
 
     

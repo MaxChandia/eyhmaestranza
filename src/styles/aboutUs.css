@@ -102,3 +102,22 @@
         transition-delay: 0.5s;
     }
 }
+
+@media (min-width: 1900px) and (max-width: 2000px) {
+    .aboutUsText h1 {
+        text-align: left;
+        margin-bottom: 70px;
+        color: #850e00;
+        width: 70%;
+    }
+    
+    .aboutUsText p {   
+        display: flex;
+        align-items: center;
+        margin-bottom: 80px;
+        width: 70%;
+        height: 100px;
+        font-size: 18px;
+        text-align: justify;
+    }
+}

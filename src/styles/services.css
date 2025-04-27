@@ -4,30 +4,6 @@
     margin-top: 150px;
 }
 
-.servicesHeader {
-    position: relative;
-    display: flex;
-    width: auto;
-    height: 90vh;
-    width: 100%;
-    
-}
-
-.servicesHeader img {
-    width: 100%;
-    transition-delay: 1s;
-}
-
-.servicesHeader h1 {
-    position: absolute;
-    color: white;
-    top: 15%;
-    right: 5%;
-    width: 50%;
-    text-align: end;
-    transition-delay: 1.5s;
-}
-
 .serviceCardContainer {
     display: flex;
     width: 100%;
@@ -40,13 +16,16 @@
     color: rgb(10, 16, 99);
     height: 80vh;
     background-color: #f4f4f4 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
 
 .servicesCard p {
     margin-bottom: 50px;
     font-size: 40px;
     font-weight: 600;
-    padding-top: 80px;
     padding-left: 100px;
     transition-delay: 1200ms;
 }
@@ -125,9 +104,12 @@
 }
 
 .imageProducts {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    column-gap: 10px;
 }
 
 .imageProducts img {
@@ -222,6 +204,11 @@
         font-size: 20px;
         margin: 60px 20px 50px 40px;
         width: 80%;
+    }
+
+    .imageProducts {
+        display: flex;
+        flex-direction: column;
     }
 }
 

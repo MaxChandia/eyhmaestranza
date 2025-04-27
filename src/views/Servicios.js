@@ -10,8 +10,6 @@ import { Slides } from "../components/slides";
 const Services = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showImage, setShowImage] = useState(false);
-    const [selectedImage, setSelectedImage] =useState(null);
-    const [carrouselImages, setCarrouselImages] = useState ([]);
     const [carrouselCurrentIndex, setCarrouselCurrentIndex] = useState (0);
     
 
@@ -48,18 +46,13 @@ const Services = () => {
       }, []);
     
     
-      const openImage = (slide, index) => {
-        setSelectedImage(slide.src);
+      const openImage = (index) => {;
         setCarrouselCurrentIndex(index);
         setShowImage(true); 
       };
+  
     
-      useEffect(() => {
-        setCarrouselImages(Slides); 
-      }, []);
-    
-      const closeImage = () => {
-        setSelectedImage(null);
+      const closeImage = () => {;
         setCarrouselCurrentIndex(0);
         setShowImage(false);
       };
@@ -73,16 +66,14 @@ const Services = () => {
     
       const previousImage = () => {
         setCarrouselCurrentIndex((prevIndex) => {
-          const newIndex = prevIndex === 0 ? carrouselImages.length - 1 : prevIndex - 1;
-          setSelectedImage(carrouselImages[newIndex].src); 
+          const newIndex = prevIndex === 0 ? Slides.length - 1 : prevIndex - 1;
           return newIndex;
         });
       };
       
       const nextImg = () => {
         setCarrouselCurrentIndex((prevIndex) => {
-          const newIndex = prevIndex === carrouselImages.length - 1 ? 0 : prevIndex + 1;
-          setSelectedImage(carrouselImages[newIndex].src); 
+          const newIndex = prevIndex === Slides.length - 1 ? 0 : prevIndex + 1;
           return newIndex;
         });
     };
@@ -98,6 +89,7 @@ const Services = () => {
             </div> */}
             <section className="serviceCardContainer animate-on-scroll animate-right" >
                 <div className="servicesCard">
+                  <div className="servicesCardText">
                     <p className="servicesTitleCard animate-on-scroll animate-right"> <FontAwesomeIcon icon={faGear}  /> Servicios</p>
                     <ul>
                         <li className="animate-on-scroll animate-right"> &gt; Fabricación de estructuras y piezas metálicas</li>
@@ -106,6 +98,7 @@ const Services = () => {
                         <li className="animate-on-scroll animate-right"> &gt; Centro Mecanizado</li>
                         <li className="animate-on-scroll animate-right"> &gt; Soldadura</li>
                     </ul>
+                    </div>
                 </div>
                 <div className="serviceCardImage">
                     <button onClick={handlePrevClick}>&lt;</button>
@@ -119,9 +112,9 @@ const Services = () => {
                 <div className="underline"></div>
             </div>
             <div className="imageProducts" >
-                {Slides.map((slide, index) => (
+                {Slides.map((slide,index) => (
               <img key={slide.id} src={slide.src} alt={slide.alt}
-                  onClick={() => openImage(slide, index)}></img>
+                  onClick={() => openImage(index)}></img>
               ))};
             </div>
         </section >
@@ -136,12 +129,11 @@ const Services = () => {
             >
               <button className="arrowLeft" onClick={previousImage}><FontAwesomeIcon icon={faArrowLeft} /></button>
               <button className="arrowRight" onClick={nextImg}><FontAwesomeIcon icon={faArrowRight} /></button>
-              {selectedImage && (
+              {
                   <img
                     src={Slides[carrouselCurrentIndex]?.src}
                     alt={Slides[carrouselCurrentIndex]?.alt || "Imagen"}
-                  />
-                )};
+                  />};
             </Modal>
         </div>
     )

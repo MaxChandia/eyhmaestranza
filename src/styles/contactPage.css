@@ -15,7 +15,7 @@
 }
 
 .imageContactContainer img {
-    width: 110%;
+    width: 120%;
     height: 100%;
     border: 0;
     overflow: hidden;
@@ -23,10 +23,12 @@
 }
 
 .contactPageContact {
+    display: flex;
+    align-items: center;
     margin-left: 50px;
     width: 50%;
     flex-direction: column;
-    margin-top: 40px;
+    padding: 50px;
     
 }
 
@@ -37,8 +39,8 @@ div li {
 
 
 .contactPageData {
+    display: flex;
     flex: 0 0 40%; 
-    padding: 20px;
     box-sizing: border-box;
     align-items: center;
     text-align: center;
@@ -71,7 +73,6 @@ div li {
 
 .formulario, .contactPageChannels {
     flex: 1; 
-    margin-top: 30px;
     box-sizing: border-box;
     transition-delay: 2s;
 } 
@@ -110,7 +111,6 @@ div li {
 }
 
 .contactPageChannels {
-    margin-top: 40px;
     font-weight: 500;
     margin-left: 60px;
 }
@@ -244,5 +244,34 @@ div li {
     .mapText :nth-child(2) {
         transition-delay: 0.5s;
     
+    }
+}
+
+@media (min-width: 1900px) and (max-width: 2000px) {
+    .contactPageData {
+        font-size: 18px;
+    }
+
+    .contactPageChannels {
+        font-size: 18px;
+        margin-left: 30px;
+    }
+
+    .grupo input, textarea {
+        width: 220px;
+        height: 50px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .grupo input {
+        height: 50px;
+        
+    }
+
+    .contactPageBottom {
+        display: flex;
+        width: 100%;
+        margin-left: 0; 
+        padding: 0 50px; 
     }
 }

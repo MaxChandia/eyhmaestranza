@@ -13,7 +13,6 @@ import { Slides } from "../components/slides";
 const Home = () => {
   const [showImage, setShowImage] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [carrouselImages, setCarrouselImages] = useState([]);
   const [carrouselCurrentIndex, setCarrouselCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -37,10 +36,8 @@ const Home = () => {
     setCarrouselCurrentIndex(index);
     setShowImage(true);
   };
+ 
 
-  useEffect(() => {
-    setCarrouselImages(Slides);
-  }, []);
 
   const closeImage = () => {
     setSelectedImage(null);
@@ -56,16 +53,16 @@ const Home = () => {
 
   const previousImage = () => {
     setCarrouselCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex === 0 ? carrouselImages.length - 1 : prevIndex - 1;
-      setSelectedImage(carrouselImages[newIndex].src);
+      const newIndex = prevIndex === 0 ? Slides.length - 1 : prevIndex - 1;
+      setSelectedImage(Slides[newIndex].src);
       return newIndex;
     });
   };
 
   const nextImg = () => {
     setCarrouselCurrentIndex((prevIndex) => {
-      const newIndex = prevIndex === carrouselImages.length - 1 ? 0 : prevIndex + 1;
-      setSelectedImage(carrouselImages[newIndex].src);
+      const newIndex = prevIndex === Slides.length - 1 ? 0 : prevIndex + 1;
+      setSelectedImage(Slides[newIndex].src);
       return newIndex;
     });
   };
