@@ -195,11 +195,16 @@ div li {
         width: 100%;
     }
 
+
     .contactPageContact {
         width: 100%;
         height: auto;
         margin-top: 20px;
         margin-left: 0;
+    }
+
+    .contactPageData {
+        margin-bottom: 40px;
     }
 
     .contactPageBottom {
