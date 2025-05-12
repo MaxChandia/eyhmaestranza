@@ -45,6 +45,12 @@ const Services = () => {
         };
       }, []);
     
+      useEffect(() => {
+      images.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+      }, []);
     
       const openImage = (index) => {;
         setCarrouselCurrentIndex(index);
