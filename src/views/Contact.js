@@ -64,7 +64,7 @@ const ContactPage = () => {
             <Navbar />
             <div className="contactPageContainer">
                 <div className="imageContactContainer animate-on-scroll animate-right"              >
-                    <img loading="lazy" alt="contactImage" src='photos/contact-image.jpg'></img>
+                    <img loading="lazy" alt="contactImage" src='photos/contact-image.webp'></img>
                 </div>
                 <div className="contactPageContact">
                     <div className="contactPageData">

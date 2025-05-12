@@ -14,10 +14,10 @@ const Services = () => {
     
 
     const images = [
-        "/photos/carrousel-2.jpg",
-        "/photos/carrousel-3.jpg",
-        "/photos/carrousel-4.jpg",
-        "/photos/carrousel-1.jpg"
+        "/photos/carrousel-2.webp",
+        "/photos/carrousel-3.webp",
+        "/photos/carrousel-4.webp",
+        "/photos/carrousel-1.webp"
     ];
 
     const handlePrevClick = () => {
