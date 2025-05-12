@@ -102,7 +102,7 @@ const Services = () => {
                 </div>
                 <div className="serviceCardImage">
                     <button onClick={handlePrevClick}>&lt;</button>
-                    <img src={images[currentIndex]} alt="Servicios" />
+                    <img loading="lazy" src={images[currentIndex]} alt="Servicios" />
                     <button onClick={handleNextClick}>&gt;</button>
                 </div>
             </section >
@@ -113,7 +113,7 @@ const Services = () => {
             </div>
             <div className="imageProducts" >
                 {Slides.map((slide,index) => (
-              <img key={slide.id} src={slide.src} alt={slide.alt}
+              <img loading="lazy" key={slide.id} src={slide.src} alt={slide.alt}
                   onClick={() => openImage(index)}></img>
               ))};
             </div>
@@ -133,6 +133,7 @@ const Services = () => {
                   <img
                     src={Slides[carrouselCurrentIndex]?.src}
                     alt={Slides[carrouselCurrentIndex]?.alt || "Imagen"}
+                    loading="lazy"
                   />};
             </Modal>
         </div>

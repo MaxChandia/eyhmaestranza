@@ -92,41 +92,41 @@ const Home = () => {
         <p className="animate-on-scroll animate-fade-in">Más de 10 años contribuyendo al rubro de la metalmecánica</p>
       </div>
       <div className="workPlaceDescription animate-on-scroll animate-right">
-        <img src='/photos/work-1.jpg' alt="workDescription"></img>
+        <img loading="lazy" src='/photos/work-1.jpg' alt="workDescription"></img>
         <div className="descriptionText">
-          <h1><b>En E&H Maestranza Ltda.</b></h1>
+          <h2><b>En E&H Maestranza Ltda.</b></h2>
           <p>Contamos con implementos de última tecnología y personal especializado en cada área para satisfacer las necesidades de nuestros clientes. </p>
           <p style={{ marginTop: "20px" }}><b><i><Link to="/nuestro-taller"> <FontAwesomeIcon icon={faArrowRight} /> Revisa nuestro taller</Link></i></b></p>
         </div>
       </div>
       <section className="imageRowContainer animate-on-scroll animate-left">
         <div className="imageRowTitle">
-          <p>
+          <h2>
             <FontAwesomeIcon icon={faGear} />&nbsp; Nuestros servicios
-          </p>
+          </h2>
         </div>
         <div className="imageRow ">
           <div className="imageContainer">
-            <img src='/photos/image-row-1.jpg' alt="Service 1" />
+            <img loading="lazy" src='/photos/image-row-1.jpg' alt="Service 1" />
             <p className="imageText">Reparación y fabricación de componentes metálicos</p>
           </div>
           <div className="imageContainer">
-            <img src='/photos/image-row-2.jpg' alt="Service 2" />
+            <img loading="lazy" src='/photos/image-row-2.jpg' alt="Service 2" />
             <p className="imageText2">Trabajo de tornería y fresado</p>
           </div>
           <div className="imageContainer">
-            <img src='/photos/image-row-3.jpg' alt="Service 3" />
+            <img loading="lazy" src='/photos/image-row-3.jpg' alt="Service 3" />
             <p className="imageText2">Soldadura</p>
           </div>
           <div className="imageContainer">
-            <img src='/photos/image-row-4.jpg' alt="Service 3" />
+            <img loading="lazy" src='/photos/image-row-4.jpg' alt="Service 3" />
             <p className="imageText2">Centro Mecanizado</p>
           </div>
         </div>
       </section>
       <section className="products animate-on-scroll animate-">
         <div className="titleProducts">
-          <p>Conoce nuestros trabajos</p>
+          <h2>Conoce nuestros trabajos</h2>
         </div>
         <div className="imageProducts">
           {Slides.map((slide, index) => (

@@ -91,6 +91,10 @@
     background-color: rgb(239, 239, 239);
 }
 
+.imageRowTitle h2 {
+    font-size: 30px;
+}
+
 .imageRow {
     width: 100%;
     display: flex;
@@ -163,7 +167,7 @@
 
 }
 
-.descriptionText h1 {
+.descriptionText h2 {
     margin-top: 100px;
     margin-right: 50px;
     height: auto;
@@ -198,17 +202,21 @@
     height: auto;
     width: auto;
     text-align: center; 
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
 .titleProducts {
+    height: 100px;
     margin-bottom: 50px;
-    font-size: 30px;
-    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.titleProducts h2 {
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .imageProducts {
