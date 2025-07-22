@@ -24,9 +24,9 @@ Desarrollo completo del sitio web corporativo para E&H Maestranza Ltda., empresa
 - **Routing**: React Router DOM
 - **UI Components**: React Modal, Font Awesome Icons
 - **Optimización**: Lazy loading, WebP images, fetchPriority
-- **SEO**: Meta tags, structured data, semantic HTML
-- **Performance**: Intersection Observer API, optimized images
-- **Herramientas**: Git, GitHub, Webpack, Babel
+- **SEO**: Meta tags, datos y estructurados, control semántico de HTML
+- **Performance**: Intersection Observer API.
+- **Herramientas**: Git, GitHub, Webpack.
 
 ---
 
@@ -41,22 +41,6 @@ Desarrollo completo del sitio web corporativo para E&H Maestranza Ltda., empresa
 - [x] **Navegación por teclado** (flechas, escape)
 - [x] **Animaciones on-scroll** con Intersection Observer
 - [x] **Sistema de routing** para múltiples páginas
-
-### 🚀 **Optimizaciones Técnicas**
-- [x] **Lazy loading** en todas las imágenes
-- [x] **WebP format** para mejor compresión
-- [x] **fetchPriority="high"** en imágenes críticas
-- [x] **Intersection Observer** para animaciones eficientes
-- [x] **Event listeners cleanup** para prevenir memory leaks
-- [x] **Semantic HTML** y accesibilidad mejorada
-
-### 📱 **UX/UI Features**
-- [x] **Responsive design** mobile-first
-- [x] **Modal interactivo** para visualizar trabajos
-- [x] **Navegación intuitiva** entre imágenes
-- [x] **Animaciones suaves** de entrada de elementos
-- [x] **Loading states** y feedback visual
-- [x] **Cross-browser compatibility**
 
 ---
 
@@ -126,19 +110,13 @@ useEffect(() => {
 - **Navegación por teclado**: Totalmente funcional
 - **Alt texts**: Implementados en todas las imágenes
 - **Semantic HTML**: Estructura correcta con landmarks
+- **Diseño Responsivo.
 
 ### **📊 SEO Técnico**
 - **Meta descriptions**: Optimizadas por página
 - **Schema markup**: Implementado para empresa local
 - **OpenGraph tags**: Para compartir en redes sociales
 - **Sitemap.xml**: Generado automáticamente
-
-### **📱 Responsive Design**
-- **Mobile-first approach**: Diseño optimizado para móviles
-- **Breakpoints**: Tablet (768px), Desktop (1024px)
-- **Touch interactions**: Optimizadas para dispositivos táctiles
-- **Cross-browser**: Compatible con Chrome, Firefox, Safari, Edge
-
 ---
 
 ## 🏗️ Arquitectura del Proyecto
@@ -189,25 +167,6 @@ La página presenta los principales servicios de E&H Maestranza:
 3. **Soldadura** especializada industrial
 4. **Centro Mecanizado** con tecnología avanzada
 
----
-
-## 🗺️ Integración con Google Maps
-
-```javascript
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."
-  width="100%"
-  height="300"
-  title="Ubicación en Google Maps"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
-```
-
-**Ubicación**: Antofagasta, Chile  
-**Coordenadas**: -23.59972520931845, -70.38654535358513
 
 ---
 
@@ -231,51 +190,6 @@ const previousImage = useCallback(() => {
 }, []);
 ```
 
----
-
-## 🚀 Mejoras Implementadas
-
-### **Antes del Proyecto**
-- Sin presencia digital profesional
-- Dependencia total del boca a boca
-- Dificultad para mostrar portfolio de trabajos
-
-### **Después del Proyecto**
-- Sitio web moderno y profesional
-- Gallery interactiva de trabajos realizados
-- Mejora en la percepción de marca
-- Facilidad para compartir trabajos con clientes
-
----
-
-## 📋 Checklist de Entrega
-
-### ✅ **Desarrollo Completado**
-- [x] Componente Home funcional
-- [x] Sistema de navegación
-- [x] Galería interactiva
-- [x] Optimizaciones de performance
-- [x] Responsive design
-- [x] Accesibilidad implementada
-- [x] SEO técnico configurado
-- [x] Testing cross-browser
-
-### ✅ **Optimizaciones**
-- [x] Imágenes WebP optimizadas
-- [x] Lazy loading implementado
-- [x] Intersection Observer para animaciones
-- [x] Event listeners con cleanup
-- [x] Memoization de callbacks
-- [x] Bundle size optimizado
-
-### ✅ **Documentación**
-- [x] README.md del proyecto
-- [x] Comentarios en código crítico
-- [x] Documentación de componentes
-- [x] Guía de deployment
-
----
-
 ## 🔗 Enlaces del Proyecto
 
 - **🌐 Sitio Web**: [URL del sitio en producción]
@@ -298,7 +212,3 @@ Este proyecto demuestra expertise en:
 - **User experience** con modales y transiciones
 
 ---
-
-**Desarrollador**: Maximiliano Chandía Flores  
-**Stack**: React + JavaScript + CSS3  
-**Fecha**: 2024
