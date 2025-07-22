@@ -2,7 +2,6 @@
 
 **📅 Duración**: [Marzo 2024] - [Octubre 2024]  
 **👤 Cliente**: E&H Maestranza Ltda.  
-**💰 Valor**: [Monto del proyecto]  
 **🌐 Sector**: Metalmecánica Industrial
 
 ---
