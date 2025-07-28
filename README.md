@@ -87,14 +87,6 @@ useEffect(() => {
    <img loading="lazy" src={item.src} alt={`Servicio ${i + 1}`} />
    ```
 
-3. **Callback memoization**:
-   ```javascript
-   const nextImage = useCallback(() => {
-     setSelectedIndex(prev => (prev === Slides.length - 1 ? 0 : prev + 1));
-   }, []);
-   ```
-
----
 
 ## 📈 Métricas y Resultados
 
