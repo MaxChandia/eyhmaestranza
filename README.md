@@ -8,7 +8,7 @@
 
 ## 📝 Descripción del Proyecto
 
-Desarrollo completo del sitio web corporativo para E&H Maestranza Ltda., empresa con más de 10 años de experiencia en el rubro metalmecánico. La plataforma presenta los servicios de la empresa, galería de trabajos realizados y información de contacto, con foco en generar confianza y mostrar la experiencia técnica.
+Desarrollo completo del sitio web corporativo para E&H Maestranza Ltda., empresa con más de 10 años de experiencia en el rubro metalmecánico. La plataforma presenta los servicios de la empresa, galería de trabajos realizados e información de contacto, con foco en generar confianza y mostrar la experiencia técnica.
 
 **Objetivos principales:**
 - Establecer presencia digital profesional
@@ -204,3 +204,4 @@ Este proyecto demuestra expertise en:
 - **User experience** con modales y transiciones
 
 ---
+
