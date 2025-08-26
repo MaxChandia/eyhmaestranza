@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import '../styles/contactPage.css';
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -7,57 +6,53 @@ import Footer from "../components/footer";
 const ContactPage = () => {
 
     const [contactInfo, setContactInfo] = useState({
-        nombre: '',
-        telefono: '',
-        ciudad: '',
-        email: '',
-        Comentario: ''
-    });
+        nombre: '',
+        telefono: '',
+        ciudad: '',
+        email: '',
+        Comentario: ''
+    });
 
-    const saveContactInfo = (e) => {
+    function saveContactInfo(e) {
         setContactInfo({ ...contactInfo, [e.target.name]: e.target.value });
-    };
+    }  
 
-    const clearContactInfo = (e) => {
-        e.preventDefault();
-    
+    const clearContactInfo = async (e) => {
+        e.preventDefault();
+    
+        if (!contactInfo.nombre || !contactInfo.telefono || !contactInfo.ciudad || !contactInfo.email || !contactInfo.Comentario) {
+            alert("Todos los campos son obligatorios.");
+            return;
+        }
+    
+        try {
+            const response = await fetch('https://eyhmaestranza.cl/api/procesar_contacto.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(contactInfo),
+            });
 
-        if (!contactInfo.nombre || !contactInfo.telefono || !contactInfo.ciudad || !contactInfo.email || !contactInfo.Comentario) {
-            alert("Todos los campos son obligatorios.");
-            return;
-        }
-    
+            const result = await response.json();
 
-        emailjs.send(
-            'service_xutgngn', 
-            'template_b2w35om',
-            {
-                to_name: 'contacto@eyhmaestranza.cl',
-                from_name: contactInfo.nombre, 
-                message: contactInfo.Comentario, 
-                reply_to: contactInfo.email,
-                from_email: 'contacto@eyhmaestranza.cl', 
-                ciudad: contactInfo.ciudad, 
-                telefono: contactInfo.telefono, 
-                to_email: 'maximiliano.chandiaf@gmail.com' 
-            },
-            'i5bpqOQH5kvoK7dZ5' 
-        )
-        .then((result) => {
-            console.log('Email enviado:', result.text);
-            alert('Formulario enviado exitosamente.');
-            setContactInfo({
-                nombre: '',
-                telefono: '',
-                ciudad: '',
-                email: '',
-                Comentario: ''
-            });
-        }, (error) => {
-            console.error('Error al enviar el formulario:', error.text);
-            alert('Error al enviar el formulario, por favor intenta de nuevo.');
-        });
-    };
+            if (result.success) {
+                alert('Formulario enviado exitosamente.');
+                setContactInfo({
+                    nombre: '',
+                    telefono: '',
+                    ciudad: '',
+                    email: '',
+                    Comentario: ''
+                });
+            } else {
+                alert(`Error al enviar el formulario: ${result.message}`);
+            }
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+            alert('Error de conexión con el servidor. Por favor, intenta de nuevo más tarde.');
+        }
+    };
 
     return (
         <div>

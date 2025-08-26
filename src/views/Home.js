@@ -16,7 +16,6 @@ const Home = () => {
   const arrowRightRef = useRef(null);
   const arrowLeftRef = useRef(null);
 
-  // Control teclado
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowRight") {
@@ -32,7 +31,6 @@ const Home = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Observador para animaciones
   useEffect(() => {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -118,7 +116,6 @@ const Home = () => {
           {Slides.map((slide, index) => (
             <img
               key={slide.id}
-              loading="lazy"
               fetchPriority="high"
               src={slide.src}
               alt={slide.alt || `Trabajo ${index + 1}`}

@@ -74,6 +74,10 @@
     
 }
 
+.NavPages li:hover p {
+    color: #e96500;
+}
+
 .NavPages a {
     text-decoration: none;
 }

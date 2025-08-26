@@ -194,8 +194,12 @@
 
     text-decoration: none;
     color: black;
+    transition: color 0.3s ease;
 }
 
+.descriptionText a:hover {
+    color: #f46016;
+}
 
 .products {
     display: block;
@@ -329,11 +333,11 @@
         margin: 20px 0;
     }
 
-    .descriptionText h1{
+    .descriptionText h2{
         margin-top: 50px;
         margin-left: 30px;
         width: auto;
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .descriptionText p{
