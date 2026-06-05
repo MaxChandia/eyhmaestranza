@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/carrousel.css';
 import { Link } from "react-router-dom";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 const Carrousel = () => {
     return(
@@ -16,9 +17,11 @@ const Carrousel = () => {
         </video>
         
         <div className="slideTextContainer">
-            <div className="slideText animate-on-scroll animate-right" >
-                Aportando con excelencia a la industria minera
-            </div>
+            <AnimateOnScroll className="slideText" animation="animate-right" delay={1}>
+                <div  >
+                    Aportando con excelencia a la industria minera
+                </div>
+            </AnimateOnScroll>
             <Link to="/contacto">
                 <button className="slideButton">
                     Contáctenos
