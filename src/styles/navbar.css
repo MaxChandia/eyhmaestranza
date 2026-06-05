@@ -76,6 +76,7 @@
 
 .NavPages li:hover p {
     color: #e96500;
+    transition: color 0.3s ease;
 }
 
 .NavPages a {
