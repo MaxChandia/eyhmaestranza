@@ -1,147 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import Modal from 'react-modal';
+import AnimateOnScroll from "../components/AnimateOnScroll";
+import Gallery from "../components/gallery";
+import ServiceSlider from "../components/ServiceSlider";
 import '../styles/services.css'
-import { faGear, faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Slides } from "../components/slides";
 
 const Services = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [showImage, setShowImage] = useState(false);
-    const [carrouselCurrentIndex, setCarrouselCurrentIndex] = useState (0);
-    
-
-    const images = [
-        "/photos/carrousel-2.webp",
-        "/photos/carrousel-3.webp",
-        "/photos/carrousel-4.webp",
-        "/photos/carrousel-1.webp"
-    ];
-
-    const handlePrevClick = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-    };
-
-    const handleNextClick = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    };
-
-    
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-          if (event.key === "ArrowRight") {
-            document.querySelector(".arrowRight").click();
-          } else if (event.key === "ArrowLeft") {
-            document.querySelector(".arrowLeft").click();
-          }
-        };
-      
-        window.addEventListener("keydown", handleKeyDown);
-      
-        return () => {
-          window.removeEventListener("keydown", handleKeyDown);
-        };
-      }, []);
-    
-      useEffect(() => {
-      images.forEach(src => {
-        const img = new Image();
-        img.src = src;
-      });
-      }, []);
-    
-      const openImage = (index) => {;
-        setCarrouselCurrentIndex(index);
-        setShowImage(true); 
-      };
-  
-    
-      const closeImage = () => {;
-        setCarrouselCurrentIndex(0);
-        setShowImage(false);
-      };
-     
-      const handleOverlayClick = (event) => {
-        if (event.target === event.currentTarget) {
-          closeImage();
-        }
-      };
-    
-    
-      const previousImage = () => {
-        setCarrouselCurrentIndex((prevIndex) => {
-          const newIndex = prevIndex === 0 ? Slides.length - 1 : prevIndex - 1;
-          return newIndex;
-        });
-      };
-      
-      const nextImg = () => {
-        setCarrouselCurrentIndex((prevIndex) => {
-          const newIndex = prevIndex === Slides.length - 1 ? 0 : prevIndex + 1;
-          return newIndex;
-        });
-    };
-    
-
     return (
-        <div className="servicesContainer" >
-             <Navbar/>
-             
-            {/*<div className="servicesHeader">
-                <img className="serviceImage animate-on-scroll animate-right" alt="serviceImage" src='/photos/services-header.webp'></img>
-                <h1 className="animate-on-scroll">EN NUESTRO TALLER GARANTIZAMOS EXCELENTES RESULTADOS</h1>
-            </div> */}
-            <section className="serviceCardContainer animate-on-scroll animate-right" >
+        <div className="servicesContainer">
+            <Navbar/>
+            
+            <AnimateOnScroll className="serviceCardContainer" animation="animate-right">
                 <div className="servicesCard">
-                  <div className="servicesCardText">
-                    <p className="servicesTitleCard animate-on-scroll animate-right"> <FontAwesomeIcon icon={faGear}  /> Servicios</p>
-                    <ul>
-                        <li className="animate-on-scroll animate-right"> &gt; Fabricación de estructuras y piezas metálicas</li>
-                        <li className="animate-on-scroll animate-right"> &gt; Reparación de componentes industriales</li>
-                        <li className="animate-on-scroll animate-right"> &gt; Trabajo de tornería y fresado</li>
-                        <li className="animate-on-scroll animate-right"> &gt; Centro Mecanizado</li>
-                        <li className="animate-on-scroll animate-right"> &gt; Soldadura</li>
-                    </ul>
+                    <div className="servicesCardText">
+                        <AnimateOnScroll className="servicesTitleCard" animation="animate-right"> 
+                            <FontAwesomeIcon icon={faGear} /> Servicios
+                        </AnimateOnScroll>
+                        <ul>
+                            <AnimateOnScroll as="li" animation="animate-right"> &gt; Fabricación de estructuras y piezas metálicas</AnimateOnScroll>
+                            <AnimateOnScroll as="li" animation="animate-right"> &gt; Reparación de componentes industriales</AnimateOnScroll>
+                            <AnimateOnScroll as="li" animation="animate-right"> &gt; Trabajo de tornería y fresado</AnimateOnScroll>
+                            <AnimateOnScroll as="li" animation="animate-right"> &gt; Centro Mecanizado</AnimateOnScroll>
+                            <AnimateOnScroll as="li" animation="animate-right"> &gt; Soldadura</AnimateOnScroll>
+                        </ul>
                     </div>
                 </div>
-                <div className="serviceCardImage">
-                    <button onClick={handlePrevClick}>&lt;</button>
-                    <img loading="lazy" src={images[currentIndex]} alt="Servicios" />
-                    <button onClick={handleNextClick}>&gt;</button>
-                </div>
-            </section >
-        <section  className="productService animate-on-scroll animate-up">
-            <div className="titleProducts">
-                <p>Los calidad de nuestros trabajos demuestran nuestro compromiso</p>
-                <div className="underline"></div>
-            </div>
-            <div className="imageProducts" >
-                {Slides.map((slide,index) => (
-              <img loading="lazy" key={slide.id} src={slide.src} alt={slide.alt}
-                  onClick={() => openImage(index)}></img>
-              ))};
-            </div>
-        </section >
+                
+                <ServiceSlider />
+
+            </AnimateOnScroll>
+
+            <Gallery />
+            
             <Footer/>
-            <Modal
-              isOpen={showImage}
-              onRequestClose={closeImage}
-              onClick={handleOverlayClick}
-              contentLabel="Image Lightbox"
-              className="lightbox"
-              overlayClassName="lightbox-overlay"
-            >
-              <button className="arrowLeft" onClick={previousImage}><FontAwesomeIcon icon={faArrowLeft} /></button>
-              <button className="arrowRight" onClick={nextImg}><FontAwesomeIcon icon={faArrowRight} /></button>
-              {
-                  <img
-                    src={Slides[carrouselCurrentIndex]?.src}
-                    alt={Slides[carrouselCurrentIndex]?.alt || "Imagen"}
-                    loading="lazy"
-                  />};
-            </Modal>
         </div>
     )
 };
